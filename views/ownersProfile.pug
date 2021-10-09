@@ -1,0 +1,20 @@
+h3 #{owner.name}'s Profile Page
+
+div.profileDiv
+  p Owner's Name: #{owner.name} #{owner.lastName}
+  p Phone: #{owner.phone}
+  p Email: #{owner.email}
+  p Address: #{owner.address}
+  p Source: #{owner.source}
+  p Notes: #{owner.notes}
+    //- - if(owner.geopoint && owner.geopoint.coordinates)
+    div.map
+      <div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=#{owner.geopoint.coordinates[1]}%2C%20#{owner.geopoint.coordinates[0]}&t=&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>google maps <a href="http://www.pureblack.de/google-maps/">pure black</a></div><style>.mapouter{overflow:hidden;height:250px;width:300px;}.gmap_canvas {background:none!important;height:500px;width:600px;}</style></div>
+  a(href="#" onclick="loadUserEdit('"+owner._id+"');") Edit User
+  //- form#form_login(name="editUser", method="post", action="/editUserForm")
+  //-   input(type="hidden", name="owner", value=owner)
+  //-   button.submit.active(type="submit" name="editUser") Edit User
+  p Dogs:
+  each dog in owner.dogsArray
+    p
+     a(href="#" onclick="loadDogProfile('"+dog._id+"');") #{dog.name}

@@ -1,0 +1,109 @@
+extends layoutBack
+block content
+  include menu
+  div#console
+    a(href="/viewAccounting?year=2019") 2019  -
+    a(href="/viewAccounting?year=2020") 2020
+    h2 #{currentYear}
+
+    table
+      thead    
+        tr#headtag
+          th Month
+          th Services
+          th Avg price per service
+          th Total Cash
+          th Total Transfer
+          th Total
+      tbody
+        tr
+          td January
+          td=(jan && jan.services) ? jan.services : 0
+          td=(jan && jan.pps) ? jan.pps + '€' : 0 + '€'
+          td=(jan && jan.totalCash) ? jan.totalCash + '€' : 0 + '€'
+          td=(jan && jan.totalTransfer) ? jan.totalTransfer + '€' : 0 + '€'
+          td=(jan && jan.totalMoney) ? jan.totalMoney + '€' : 0 + '€'
+        tr
+          td February
+          td=(feb && feb.services) ? feb.services : 0
+          td=(feb && feb.pps) ? feb.pps + '€' : 0 + '€'
+          td=(feb && feb.totalCash) ? feb.totalCash + '€' : 0 + '€'
+          td=(feb && feb.totalTransfer) ? feb.totalTransfer + '€' : 0 + '€'
+          td=(feb && feb.totalMoney) ? feb.totalMoney + '€' : 0 + '€'
+        tr
+          td March
+          td=(mar && mar.services) ? mar.services : 0
+          td=(mar && mar.pps) ? mar.pps + '€' : 0 + '€'
+          td=(mar && mar.totalCash) ? mar.totalCash + '€' : 0 + '€'
+          td=(mar && mar.totalTransfer) ? mar.totalTransfer + '€' : 0 + '€'
+          td=(mar && mar.totalMoney) ? mar.totalMoney + '€' : 0 + '€'
+        tr
+          td April
+          td=(apr && apr.services) ? apr.services : 0
+          td=(apr && apr.pps) ? apr.pps + '€' : 0 + '€'
+          td=(apr && apr.totalCash) ? apr.totalCash + '€' : 0 + '€'
+          td=(apr && apr.totalTransfer) ? apr.totalTransfer + '€' : 0 + '€'
+          td=(apr && apr.totalMoney) ? apr.totalMoney + '€' : 0 + '€'
+        tr
+          td May
+          td=(may && may.services) ? may.services : 0
+          td=(may && may.pps) ? may.pps + '€' : 0 + '€'
+          td=(may && may.totalCash) ? may.totalCash + '€' : 0 + '€'
+          td=(may && may.totalTransfer) ? may.totalTransfer + '€' : 0 + '€'
+          td=(may && may.totalMoney) ? may.totalMoney + '€' : 0 + '€'    
+        tr
+          td June
+          td=(jun && jun.services) ? jun.services : 0
+          td=(jun && jun.pps) ? jun.pps + '€' : 0 + '€'
+          td=(jun && jun.totalCash) ? jun.totalCash + '€' : 0 + '€'
+          td=(jun && jun.totalTransfer) ? jun.totalTransfer + '€' : 0 + '€'
+          td=(jun && jun.totalMoney) ? jun.totalMoney + '€' : 0 + '€'
+        tr
+          td July
+          td=(jul && jul.services) ? jul.services : 0
+          td=(jul && jul.pps) ? jul.pps + '€' : 0 + '€'
+          td=(jul && jul.totalCash) ? jul.totalCash + '€' : 0 + '€'
+          td=(jul && jul.totalTransfer) ? jul.totalTransfer + '€' : 0 + '€'
+          td=(jul && jul.totalMoney) ? jul.totalMoney + '€' : 0 + '€'
+        tr
+          td August
+          td=(ago && ago.services) ? ago.services : 0
+          td=(ago && ago.pps) ? ago.pps + '€' : 0 + '€'
+          td=(ago && ago.totalCash) ? ago.totalCash + '€' : 0 + '€'
+          td=(ago && ago.totalTransfer) ? ago.totalTransfer + '€' : 0 + '€'
+          td=(ago && ago.totalMoney) ? ago.totalMoney + '€' : 0 + '€' 
+        tr
+          td September
+          td=(sep && sep.services) ? sep.services : 0
+          td=(sep && sep.pps) ? sep.pps + '€' : 0 + '€'
+          td=(sep && sep.totalCash) ? sep.totalCash + '€' : 0 + '€'
+          td=(sep && sep.totalTransfer) ? sep.totalTransfer + '€' : 0 + '€'
+          td=(sep && sep.totalMoney) ? sep.totalMoney + '€' : 0 + '€'
+        tr
+          td October
+          td=(oct && oct.services) ? oct.services : 0
+          td=(oct && oct.pps) ? oct.pps + '€' : 0 + '€'
+          td=(oct && oct.totalCash) ? oct.totalCash + '€' : 0 + '€'
+          td=(oct && oct.totalTransfer) ? oct.totalTransfer + '€' : 0 + '€'
+          td=(oct && oct.totalMoney) ? oct.totalMoney + '€' : 0 + '€'
+        tr
+          td November
+          td=(nov && nov.services) ? nov.services : 0
+          td=(nov && nov.pps) ? nov.pps + '€' : 0 + '€'
+          td=(nov && nov.totalCash) ? nov.totalCash + '€' : 0 + '€'
+          td=(nov && nov.totalTransfer) ? nov.totalTransfer + '€' : 0 + '€'
+          td=(nov && nov.totalMoney) ? nov.totalMoney + '€' : 0 + '€'
+        tr
+          td December
+          td=(dec && dec.services) ? dec.services : 0
+          td=(dec && dec.pps) ? dec.pps + '€' : 0 + '€'
+          td=(dec && dec.totalCash) ? dec.totalCash + '€' : 0 + '€'
+          td=(dec && dec.totalTransfer) ? dec.totalTransfer + '€' : 0 + '€'
+          td=(dec && dec.totalMoney) ? dec.totalMoney + '€' : 0 + '€'
+        tr
+          td Total
+          td
+          td
+          td
+          td
+          td=totalYear + '€'          

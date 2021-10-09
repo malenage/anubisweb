@@ -1,0 +1,100 @@
+extends layoutBack
+block content
+  include menu
+  div#console
+    //- - var initialMonth = moment(reservations[0].init).format('MMMM YYYY');
+    - var dateStart = moment('2019-04-01');
+    - var dateEnd = moment('2021-06-01');
+    - var timeValues = [];
+
+    - while (dateEnd > dateStart || dateStart.format('M') === dateEnd.format('M')) {
+    -  timeValues.push(dateStart.format('MMMM YYYY'));
+    -  dateStart.add(1,'month');
+    - }
+    
+    
+    form#formUser(name="viewReservations", method="get", action="/viewReservations")
+      select#month(name="from")
+        - for (let month of timeValues) {
+          option(value=month) #{month}
+        - }
+      button.submit.active(type="submit") Go 
+    .btn  
+     form#formUser(name="viewReservations", method="get", action="/viewReservations")
+      input(type="hidden", value=null, name="from")
+      button.submit.active(type="submit") View all   
+    br
+    div.reservation-lists.clearfix
+      table#reservationsList.table.table-striped.table-bordered
+        thead    
+          tr#headtag
+            th Dog
+            th From
+            th To
+            th Type
+            th Days
+            th P/Day
+            th Total
+            th Status
+            th Payment
+        tbody
+          each reservation in reservations
+           tr
+            td
+              a(href="#" onclick="loadDogProfile('"+reservation.dogId+"');") #{reservation.dogName}
+            - var from = moment(reservation.init).format('DD MMMM YYYY')
+            - var to = moment(reservation.end).format('DD MMMM YYYY')
+            td=from
+            td=to
+            - var type;
+            - if (reservation.type == 1) {
+            -  type = 'Sitting';
+            - } else if (reservation.type == 2) {
+            -  type = 'Training';
+            - } else if (reservation.type == 3) {
+            -  type = 'Evaluation Visit';
+            - } else if (reservation.type == 4) {
+            -  type = 'Follow up call'; }
+            td=type
+            td=reservation.period
+            td=reservation.ppd
+            td
+              a(href="#" onclick="loadReservationEdit('"+reservation._id+"');") #{reservation.priceTotal}
+            - var status;
+            - if (reservation.status == 0) {
+            -  status = 'Pending';
+            - } else if (reservation.status == 1) {
+            -  status = 'Confirmed'
+            - } else if (reservation.status == 2) {
+            -  status = 'Payed';
+            - } else if (reservation.status == 3) {
+            -  status = 'Cancelled';
+            - } else if (reservation.status == 4) {
+            -  status = 'Closed';
+            - }  
+            td=status
+            - var paymentType;
+            - if (reservation.paymentType == 1) {
+            -  paymentType = 'Cash';
+            - } else if (reservation.paymentType == 2) {
+            -  paymentType = 'Transfer';
+            - } else {
+            -  paymentType = '';
+            - }
+            td=paymentType
+
+    div#sideProfile.reservation-forms.user-form.clearfix.login-form
+      p Amount of services = #{services}
+      p Total amount for this period = #{totalMoney}
+      p Avg price per service = #{pps}
+      p Total Cash = #{totalCash}
+      //- p Taxes for Cash = #{taxesCash}
+      p Total Transfer = #{totalTransfer}
+      //- p Taxes for Transfers = #{taxesTransfer}
+  script.
+    $('#reservationsList').DataTable( {
+      paging: true,
+      order: [[ 1, "asc" ]]
+    } );
+
+    

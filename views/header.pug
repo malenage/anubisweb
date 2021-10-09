@@ -1,0 +1,85 @@
+// Page Header
+header.section.page-header
+  // RD Navbar
+  .rd-navbar-wrap.rd-navbar-modern-wrap
+    nav.rd-navbar.rd-navbar-modern(data-layout='rd-navbar-fixed' data-sm-layout='rd-navbar-fixed' data-md-layout='rd-navbar-fixed' data-md-device-layout='rd-navbar-fixed' data-lg-layout='rd-navbar-static' data-lg-device-layout='rd-navbar-fixed' data-xl-layout='rd-navbar-static' data-xl-device-layout='rd-navbar-static' data-xxl-layout='rd-navbar-static' data-xxl-device-layout='rd-navbar-static' data-lg-stick-up-offset='46px' data-xl-stick-up-offset='46px' data-xxl-stick-up-offset='70px' data-lg-stick-up='true' data-xl-stick-up='true' data-xxl-stick-up='true')
+      .rd-navbar-main-outer
+        .rd-navbar-main
+          // RD Navbar Panel
+          .rd-navbar-panel
+            // RD Navbar Toggle
+            button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+              span
+            // RD Navbar Brand
+            .rd-navbar-brand
+              a.brand(href='/')
+                img(src='images/logo-anubis-black.png' alt='' width='196' height='47')
+          .rd-navbar-main-element
+            .rd-navbar-nav-wrap
+              // RD Navbar Basket
+              // RD Navbar Nav
+              ul.rd-navbar-nav
+                //- li.rd-nav-item
+                //-   a.rd-nav-link(href='/') Home
+                li.rd-nav-item
+                  a.rd-nav-link(href='/adiestramiento') #{lit.trainingTitle}
+                li.rd-nav-item
+                  a.rd-nav-link(href='/products') #{lit.productsTitle}
+                li.rd-nav-item
+                  a.rd-nav-link(href='http://box.anubis.pet' target="_blank") #{lit.box}
+                li.rd-nav-item
+                  a.rd-nav-link(href='/portfolio') #{lit.portfolioTitle}  
+            .rd-navbar-project-hamburger(data-multitoggle='.rd-navbar-main' data-multitoggle-blur='.rd-navbar-wrap' data-multitoggle-isolate='')
+              .project-hamburger
+                span.project-hamburger-arrow-top
+                span.project-hamburger-arrow-center
+                span.project-hamburger-arrow-bottom
+              .project-hamburger-2
+                span.project-hamburger-arrow
+                span.project-hamburger-arrow
+                span.project-hamburger-arrow
+              .project-close
+                span
+                span
+          .rd-navbar-project.rd-navbar-modern-project
+            .rd-navbar-project-modern-header
+              h4.rd-navbar-project-modern-title Contáctanos
+              .rd-navbar-project-hamburger(data-multitoggle='.rd-navbar-main' data-multitoggle-blur='.rd-navbar-wrap' data-multitoggle-isolate='')
+                .project-close
+                  span
+                  span
+            .rd-navbar-project-content.rd-navbar-modern-project-content
+              div
+                p
+                  | Escríbenos con cualquier consulta que tengas. Mientras más información nos des sobre tu perro mejor podremos ayudarte.
+                .heading-6.subtitle Nuestros contactos
+                ul.rd-navbar-modern-contacts
+                  li
+                    .unit.unit-spacing-sm
+                      .unit-left
+                        span.icon.fa.fa-phone
+                      .unit-body
+                        a.link-phone(href='tel:#') +34 696-865-220 
+                  li
+                    .unit.unit-spacing-sm
+                      .unit-left
+                        span.icon.fa.fa-location-arrow
+                      .unit-body
+                        a.link-location(href='#') Trijueque, Guadalajara 19192
+                  li
+                    .unit.unit-spacing-sm
+                      .unit-left
+                        span.icon.fa.fa-envelope
+                      .unit-body
+                        a.link-email(href='mailto:#') info@anubis.pet
+                ul.list-inline.rd-navbar-modern-list-social
+                  li
+                    a.icon.fa.fa-facebook(href='https://www.facebook.com/anubisadiestramiento')
+                  //- li
+                  //-   a.icon.fa.fa-twitter(href='#')
+                  //- li
+                  //-   a.icon.fa.fa-google-plus(href='#')
+                  li
+                    a.icon.fa.fa-instagram(href='https://www.instagram.com/anubis.pet/')
+                  li
+                    a.icon.fa.fa-pinterest(href='/loginPage')

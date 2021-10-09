@@ -1,0 +1,13 @@
+extends layout
+block content
+    .page
+      div(style='height: 30px;')
+      include header
+      section.section.section-md.bg-default
+        // SnapWidget
+        iframe.snapwidget-widget(src='https://snapwidget.com/embed/850668' allowtransparency='true' frameborder='0' scrolling='no' style='border:none; overflow:hidden;  width:820px; height:4100px')
+        div.buttons
+          a(href='http://instagram.com/anubis.pet', target='_blank') Ver Mas
+      // Page Footer
+      include footer                    
+    

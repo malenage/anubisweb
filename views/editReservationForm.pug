@@ -1,0 +1,170 @@
+h3 Edit reservation for #{reservation.dogName}
+//- if validationErrors 
+//-      each valError, i in validationErrors
+//-        li#valErrors_list_item
+//-          p #{valError.msg}
+form#formUser(name="editReservation", method="post", action="/editReservation")
+  fieldset
+    div
+    div.admin-lists
+      p.radioCheckBox
+        if (reservation.type && reservation.type == 1)
+          input(type='radio', name="type", value=1, checked)
+        else
+          input(type='radio', name="type", value=1)
+        label Sitting
+
+      p.radioCheckBox
+        if (reservation.type && reservation.type == 2)
+          input(type='radio', name="type", value=2, checked)
+        else
+          input(type='radio', name="type", value=2)  
+        label Training
+
+      p.radioCheckBox
+        if (reservation.type && reservation.type == 3)
+          input(type='radio', name="type", value=3, checked)
+        else
+          input(type='radio', name="type", value=3)
+        label Evaluation Visit
+
+      p.radioCheckBox
+        if (reservation.type && reservation.type == 4)
+          input(type='radio', name="type", value=4, checked)
+        else
+          input(type='radio', name="type", value=4)  
+        label Follow up call
+
+      p.radioCheckBox
+        if (reservation.type && reservation.type == 5)
+          input(type='radio', name="type", value=5, checked)
+        else
+          input(type='radio', name="type", value=5)  
+        label Shelter  
+
+    div.admin-lists
+      p.radioCheckBox
+        if (reservation.status && reservation.status == 0)
+          input(type='radio', name="status", value=0, checked)
+        else
+          input(type='radio', name="status", value=0)  
+        label Pending
+
+      p.radioCheckBox
+        if (reservation.status && reservation.status == 1)
+          input(type='radio', name="status", value=1, checked)
+        else
+          input(type='radio', name="status", value=1)  
+        label Confirmed
+
+      p.radioCheckBox
+        if (reservation.status && reservation.status == 2)
+          input(type='radio', name="status", value=2, checked)
+        else
+          input(type='radio', name="status", value=2)  
+        label Payed
+
+      p.radioCheckBox
+        if (reservation.status && reservation.status == 3)
+          input(type='radio', name="status", value=3, checked)
+        else
+          input(type='radio', name="status", value=3)  
+        label Cancelled
+
+      p.radioCheckBox
+        if (reservation.status && reservation.status == 4)
+          input(type='radio', name="status", value=4, checked)
+        else
+          input(type='radio', name="status", value=4)  
+        label Closed  
+
+      if (reservation.pickup && reservation.pickup == true)
+        input(type='checkbox', name="pickup", value='true', checked)
+      else
+        input(type='checkbox', name="pickup", value='true')  
+      label Pickup
+
+      if (reservation.delivery && reservation.delivery == true)
+        input(type='checkbox', name="delivery", value='true', checked)
+      else
+        input(type='checkbox', name="delivery", value='true')  
+      label Delivery
+    div
+    div.admin-lists
+      if (reservation.area && reservation.area == 1)
+        input(type='radio', name="area", value=1, checked)
+      else
+        input(type='radio', name="area", value=1)  
+      label Loranca de Tajuña
+
+      if (reservation.area && reservation.area == 2)
+        input(type='radio', name="area", value=2, checked)
+      else
+        input(type='radio', name="area", value=2)  
+      label Alcala
+
+      if (reservation.area && reservation.area == 3)
+        input(type='radio', name="area", value=3, checked)
+      else
+        input(type='radio', name="area", value=3)  
+      label Madrid  
+    div
+    div.admin-lists
+      - var init = new Date(reservation.init).toISOString().slice(0, 16);
+      input(type="datetime-local", placeholder="From", name="init", value=init)
+    div.admin-lists 
+      - var end = new Date(reservation.end).toISOString().slice(0, 16);
+      input(type="datetime-local", placeholder="To", name="end", value=end)
+    div
+    div.admin-lists
+      label Price per day
+      input(type='number', name="priceDay", value=reservation.priceDay)
+    div.admin-lists
+      label Number of days/nights
+      input(type='number', name="period", value=reservation.period)
+    div
+    div.admin-lists
+      label Pickup price
+      input(type='number', name="pricePickup", value=reservation.pricePickup)
+    div.admin-lists
+      label Delivery Price
+      input(type='number', name="priceDelivery", value=reservation.priceDelivery)    
+    div
+    div.admin-lists
+      label Total Price
+      input(type='number', name="priceTotal", value=reservation.priceTotal)  
+    div.admin-lists
+      label Reservation Notes
+      textarea(type="text", placeholder="Notes", name="notes", value=reservation.notes)
+        | #{reservation.notes}
+    div
+    div.admin-lists
+      if (reservation.payed && reservation.payed == true)
+        input(type='radio', name="payed", value=true, checked)
+      else
+        input(type='radio', name="payed", value=true)  
+      label Payed
+
+      if (reservation.payed && reservation.payed == false)
+        input(type='radio', name="payed", value=false, checked)
+      else
+        input(type='radio', name="payed", value=false)  
+      label Not payed 
+    div.admin-lists
+      if (reservation.paymentType && reservation.paymentType == 1)
+        input(type='radio', name="paymentType", value=1, checked)
+      else
+        input(type='radio', name="paymentType", value=1)  
+      label Cash
+
+      if (reservation.paymentType && reservation.paymentType == 2)
+        input(type='radio', name="paymentType", value=2, checked)
+      else
+        input(type='radio', name="paymentType", value=2)  
+      label Transfer
+
+      input(type="hidden", value=dogId, name="dogId")
+      input(type="hidden", value=ownerId, name="ownerId")
+      input(type="hidden", value=dogName, name="dogName")
+      input(type="hidden", value=reservation._id, name="id")
+    button.submit.active(type="submit" name="editReservation") Edit Reservation

@@ -1,0 +1,86 @@
+extends layout
+block content
+    .page
+      div(style='height: 30px;')
+      include header
+      // Trending products
+      section.section.section-md.bg-default
+        .container
+          .row.row-40.justify-content-center
+            .col-sm-8.col-md-7.col-lg-6.wow.fadeInLeft(data-wow-delay='0s')
+              .product-banner
+                img(src='images/home-banner-1-570x715.jpg' alt='' width='570' height='715')
+                .product-banner-content
+                  .product-banner-inner
+                    h3.text-secondary-1 #{lit.products.our}
+                    h2.text-primary #{lit.products.products}
+            .col-md-5.col-lg-6
+              .row.row-30.justify-content-center
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/coming-soon.jpeg' alt='' width='270' height='280')
+                            .product-button
+                              a.button.button-md.button-white.button-ujarak(href='#') Add to cart
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.products.allPurpose}
+                          .product-price-wrap
+                            .product-price.product-price-old 0€
+                            .product-price 0€
+                          a.button.button-sm.button-secondary.button-ujarak(href='#') Add to cart
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInLeft(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/coming-soon.jpeg' alt='' width='270' height='280')
+                            .product-button
+                              a.button.button-md.button-white.button-ujarak(href='#') Add to cart
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.products.performanceH}
+                          .product-price-wrap
+                            .product-price 0€
+                          a.button.button-sm.button-secondary.button-ujarak(href='#') Add to cart
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInLeft(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/coming-soon.jpeg' alt='' width='270' height='280')
+                            .product-button
+                              a.button.button-md.button-white.button-ujarak(href='#') Add to cart
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.products.callBackLeash}
+                          .product-price-wrap
+                            .product-price 0€
+                          a.button.button-sm.button-secondary.button-ujarak(href='#') Add to cart
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/coming-soon.jpeg' alt='' width='270' height='280')
+                            .product-button
+                              a.button.button-md.button-white.button-ujarak(href='#') Add to cart
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.products.trainTreat}
+                          .product-price-wrap
+                            .product-price 0€
+                          a.button.button-sm.button-secondary.button-ujarak(href='#') Add to cart
+      // Page Footer
+      include footer                    
+    

@@ -1,0 +1,80 @@
+h3 Edit user #{owner.name}
+//- if validationErrors 
+//-      each valError, i in validationErrors
+//-        li#valErrors_list_item
+//-          p #{valError.msg}
+form#formUser(name="editUser", method="post", action="/editUser")
+  fieldset
+    div
+    div.admin-lists
+      input(type="hidden", name="id", value=owner._id)
+      input(type="text", placeholder="Name", name="name", value=owner.name)
+    div.admin-lists
+      p Add new dog
+      input(type="text", placeholder="Dog's Name", name="dogName")
+    div
+    div.admin-lists  
+      input(type="text", placeholder="Last Name", name="lastName", value=owner.lastName)
+    div.admin-lists 
+      input(type="text", placeholder="Gender", name="gender")
+    div  
+    div.admin-lists  
+      input(type="text", placeholder="Phone", name="phone", value=owner.phone)
+    div.admin-lists  
+      input(type="text", placeholder="Breed", name="breed")
+    div
+    div.admin-lists   
+      input(type="text", placeholder="Address", name="address", value=owner.address)
+      input(type="text", placeholder="Latitude", name="latitude", value=owner.geopoint.coordinates[1])
+    div.admin-lists  
+      input(type="text", placeholder="Longitude", name="longitude", value=owner.geopoint.coordinates[0]) 
+      span.radioSpan Neutered
+      input(type="radio", name="neutered", value="true")
+      span Yes
+      input(type="radio", name="neutered", value="false")
+      span No
+    div
+    div.admin-lists  
+      input(type="text", placeholder="Email", name="email", value=owner.email)
+    div.admin-lists
+      span.radioSpan Dog Friendly
+      input(type="radio", name="dogFriendly", value="true")
+      span Yes
+      input(type="radio", name="dogFriendly", value="false")
+      span No
+    div
+    div.admin-lists  
+      input#input_pass(type="text", placeholder="Source", name="source", value=owner.source)
+    div.admin-lists
+      span.radioSpan People Friendly
+      input(type="radio", name="peopleFriendly", value="true")
+      span Yes
+      input(type="radio", name="peopleFriendly", value="false")
+      span No
+      input#input_pass(type="text", placeholder="Birth", name="birth")
+    div
+    div.admin-lists
+      textarea(type="text", placeholder="Notes", name="notes", value=owner.notes)
+        | #{owner.notes}
+    div.admin-lists
+      textarea(type="text", placeholder="Dogs Notes", name="dogNotes") 
+    button.submit.active(type="submit" name="editUser" onclick="return IsEmpty();") Submit
+
+script.
+  function IsEmpty() {
+    if (document.forms['editUser'].phone.value === "") {
+      alert("Phone number can't be empty");
+      return false;
+    } else if (document.forms['editUser'].name.value === "") {
+      alert("Name can't be empty");
+      return false;
+    //- } else if (document.forms['editUser'].init.value === "") {
+    //-   alert("You must select the beggining date");
+    //-   return false; 
+    //- } else if (document.forms['editUser'].end.value === "") {
+    //-   alert("You must select the ending date");
+    //-   return false;   
+    } else {
+      return true;
+    }
+  }

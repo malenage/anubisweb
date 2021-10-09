@@ -1,0 +1,29 @@
+h3 
+  a(href="#" onclick="loadDogProfile('"+reservation.dogId+"');") #{reservation.dogName}'s Reservation
+
+div.profileDiv
+  - var initTime = moment(reservation.init).format('MMMM Do YYYY')
+  - var endTime = moment(reservation.end).format('MMMM Do YYYY')
+  p From: #{initTime}
+  p To: #{endTime}
+  p Pickup: #{reservation.pickup}
+  p Delivery: #{reservation.delivery}
+  p Charge for pickup and delivery: #{reservation.pricePickup} + #{reservation.priceDelivery}
+  - var type = 'Training';
+  - if (reservation.type == 1) type = 'Pet sitting'
+  p Type of reservation: #{type}
+  - var area = 'Hontoba - Pioz'
+  - if (reservation.area == 2) area = 'Alcalá de Henares';
+  - if (reservation.area == 3) area = 'Madrid';
+  p Area: #{area}
+  p Number of days: #{reservation.period}
+  p Price per day: #{reservation.priceDay}
+  p Price per period: #{reservation.priceDays}
+  p Total price for reservation: #{reservation.priceTotal}
+  - var payed = (reservation.payed) ? true : false;
+  p Payed: #{payed}
+  - var paymentType = 'unknown';
+  - if (reservation.paymentType) paymentType = reservation.paymentType;
+  p Payment Type: #{paymentType}
+  p Notes: #{reservation.notes}
+  a(href="#" onclick="loadReservationEdit('"+reservation._id+"');") Edit Reservation

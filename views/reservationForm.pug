@@ -1,0 +1,98 @@
+h3 Reservation for #{dogName}
+if validationErrors 
+     each valError, i in validationErrors
+       li#valErrors_list_item
+         p #{valError.msg}
+form#formUser(name="calculatePrice", method="post", action="/calculatePrice")
+  fieldset
+    div
+    div.admin-lists
+      p.radioCheckBox
+        input(type='radio', name="type", value=1)
+        label Sitting
+      p.radioCheckBox
+        input(type='radio', name="type", value=2)
+        label Training
+      p.radioCheckBox
+        input(type='radio', name="type", value=3)
+        label Evaluation Visit
+      p.radioCheckBox
+        input(type='radio', name="type", value=4)
+        label Follow up call
+      p.radioCheckBox 
+        input(type='radio', name="type", value=5)
+        label Shelter
+    div.admin-lists
+      p.radioCheckBox
+        input(type='radio', name="status", value=0)
+        label Pending
+      p.radioCheckBox  
+        input(type='radio', name="status", value=1)
+        label Confirmed
+      p.radioCheckBox  
+        input(type='radio', name="status", value=2)
+        label Payed
+      p.radioCheckBox
+        input(type='radio', name="status", value=3)
+        label Cancelled
+      p.radioCheckBox
+        input(type='radio', name="status", value=4)
+        label Closed
+    div
+    div.admin-lists
+      input(type='radio', name="area", value=1)
+      label Loranca de Tajuña
+      input(type='radio', name="area", value=2)
+      label Alcala 
+      input(type='radio', name="area", value=3)
+      label Madrid
+    div.admin-lists  
+      input(type='checkbox', name="pickup", value='true')
+      label Pickup
+      input(type='checkbox', name="delivery", value='true')
+      label Delivery
+    div
+    div.admin-lists  
+      input(type="datetime-local", placeholder="From", name="init")
+    div.admin-lists 
+      input(type="datetime-local", placeholder="To", name="end")
+    div
+    div.admin-lists
+      textarea(type="text", placeholder="Notes", name="notes")
+    //- div.admin-lists
+    //-   textarea(type="text", placeholder="Dogs Notes", name="dogNotes")
+    div
+    div.admin-lists
+      input(type='radio', name="payed", value= true)
+      label Payed
+      input(type='radio', name="payed", value= false)
+      label Not payed 
+    div.admin-lists
+      input(type='radio', name="paymentType", value=1)
+      label Cash
+      input(type='radio', name="paymentType", value=2)
+      label Transfer
+
+      input(type="hidden", value=dogId, name="dogId")
+      input(type="hidden", value=ownerId, name="ownerId")
+      input(type="hidden", value=dogName, name="dogName")
+    button.submit.active(type="submit" name="calculatePrice" onclick="return IsEmpty();") Calculate Reservation
+
+script.
+  function IsEmpty() {
+    if (document.forms['calculatePrice'].type.value === "") {
+      alert("You must select sitting or training");
+      return false;
+    } else if (document.forms['calculatePrice'].area.value === "") {
+      alert("You must select an area");
+      return false;
+    } else if (document.forms['calculatePrice'].init.value === "") {
+      alert("You must select the beggining date");
+      return false; 
+    } else if (document.forms['calculatePrice'].end.value === "") {
+      alert("You must select the ending date");
+      return false;   
+    } else {
+      return true;
+    }
+  }

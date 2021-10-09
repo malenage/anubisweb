@@ -1,0 +1,44 @@
+extends layout
+block content
+    .page
+      div(style='height: 30px;')
+      include header
+      // Trending products
+      section.section.section-md.bg-default
+        .container
+          .row.row-40.justify-content-center
+            .col-sm-8.col-md-7.col-lg-6.wow.fadeInLeft(data-wow-delay='0s')
+              .product-banner
+                img(src='images/interaction.jpg' alt='' width='570' height='715')
+                .product-banner-content
+                  .product-banner-inner(style='background-image: url(images/bg-brush.png)')
+                    h3.text-secondary-1 
+                    h2.text-primary Socialización
+            .col-md-5.col-lg-6
+              article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
+              .row.row-30.justify-content-center
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInLeft(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-body
+                          h6.product-title
+                            .product-price Jornadas de socialización
+                          .product-price-wrap
+                            p En las joranadas de socialización tu perro podrá interactuar con una manada estable, aprender o reforzar las buenas conductas y corregir las malas. El centro esta acondicionado para que tu perro, ademas de aprender, haga mucho ejercicio y juegue con otros perros, siempre en un ambiente controlado, seguro y bajo supervisión.
+                            //- .product-price €25.00
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-body
+                          h6.product-title
+                            .product-price Paseos grupales
+                          .product-price-wrap
+                            p Uno de los principales problemas con los que nos encontramos es la falta de socialización de nuestros perros. Los paseos se vuelven estresantes y terminan siendo una lucha de tirones de correa. En los paseos grupales te sumarás a una comunidad de perros estables donde tu perro tu perro podrá socializar y aprender a caminar adecuadamente con la correa. Los hacemos por el campo, tienen una duración de 30 a 60 minutos.
+                            //- .product-price €10.00
+      // Page Footer
+      include footer                    
+    

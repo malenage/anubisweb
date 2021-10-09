@@ -1,0 +1,38 @@
+h3 #{dog.name} Profile's Page
+  div.dogDiv
+    div.align  
+     img.profileImg(src=dog.profilePic)
+    div.align 
+     p  Gender: #{dog.gender}
+     p  Breed: #{dog.breed}
+     - var birth = moment(dog.birth).format('MMMM Do YYYY')
+     p  Date of Birth: #{birth}
+     - var age = moment().diff(dog.birth, 'years')
+     p  Age: #{age}
+     p  Neutered: #{dog.neutered}
+     p  Dog Friendly: #{dog.dogFriendly}
+     p  People Friendly: #{dog.peopleFriendly}
+     p  Cloudinary Tag: #{dog.cloudinaryTag}
+     p  Notes: #{dog.notes}
+  
+  div 
+   div.reservationsDiv
+    each reservation in dog.reservationsArray
+     - var initTime = moment(reservation.init).format('MMMM Do YYYY')
+     - var endTime = moment(reservation.end).format('MMMM Do YYYY')
+     p # #{initTime} - #{endTime} - #{reservation.priceTotal} € 
+      a(href="#" onclick="loadReservation('"+reservation._id+"');") View
+  p
+  if dog.images
+    .images
+     each mediaFile in dog.images.resources
+      if (mediaFile.secure_url && mediaFile.secure_url.slice(mediaFile.secure_url.length - 3) != 'mp4')
+       a(href=mediaFile.secure_url target='_blank')
+        img.className#IdName(src=mediaFile.secure_url alt="Image Title" width='120' height='120')
+      else
+        a(href=mediaFile.secure_url target='_blank') Video 
+  else
+    p No images for this dog.        
+  
+  
+  

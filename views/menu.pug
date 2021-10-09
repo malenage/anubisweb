@@ -1,0 +1,37 @@
+extends layoutBack
+block content
+  div#console
+   div#menu.login-form
+    div#logo.btn
+     img(src='/images/menu/anubisCircle.png')
+    .btn
+     form(name="home", method="post", action="/adminConsole")
+      button.submit.active(type="submit") Home
+    .btn
+     form(name="dogs", method="get", action="/viewDogs")
+      button.submit.active(type="submit") Dogs  
+    .btn
+     form(name="reservations", method="get", action="/viewReservations")
+      - var month = moment().format('MMMM YYYY');
+      input(type="hidden", value=month, name="from")
+      button.submit.active(type="submit") Reservations
+    .btn
+      form(name="accounting", method="get", action="/viewAccounting")
+        button.submit.active(type="submit") Accounting
+        //- button.submit.active(onclick='viewAccounting()') Accounting
+  script.
+      function viewAccounting() {
+        var jqXHR = $.ajax({ 
+            type:'get'
+            , url: '/viewAccounting'
+            , headers: { 
+                'Authorization': 'blabla'
+                , 'content-type': 'application/json'
+            }
+            //- , data: {
+            //-     'id': 123456, blabla
+            //- }
+        })
+        .done(function(data, status, req) {})
+        .fail(function(req, status, err) { console.log("fail", req, status, err); });
+      }     
