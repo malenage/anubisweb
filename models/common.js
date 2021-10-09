@@ -281,28 +281,6 @@ module.exports = {
         });
     },
 
-    getReservationsPromise: (query) => {
-      return new Promise((resolve, reject) => {
-        const dbase = 
-          module.exports.returnDbConnection(db)
-            .then(dbase => {
-              if (dbase) {
-                dbase.collection('reservations').find(query).sort({init: 1}).toArray((err, result) => {
-                  if (err) {
-                    reject(err);
-                  } else {
-                    resolve(result);
-                  }
-                });
-              } else {
-                reject('Database connection lost');
-              }  
-            }).catch(() => {
-                reject('error returnDb Connection');
-            });
-      }); 
-    },
-
     getReservationsById: (reservationId, callback) => {
         db.collection('reservations').findOne({_id: ObjectID(reservationId)}, (err, result) => {
             if (err){
