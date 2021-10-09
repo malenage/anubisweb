@@ -1,0 +1,225 @@
+extends layout
+block content
+    .page
+      div(style='height: 30px;')
+      include header
+      // Swiper
+      section.section.swiper-container.swiper-slider.swiper-slider-modern(data-loop='true' data-autoplay='5000' data-simulate-touch='true' data-nav='true' data-slide-effect='fade')
+        .swiper-wrapper.text-left
+          .swiper-slide.context-dark(data-slide-bg='images/slider-adiestramiento-1920×729.jpg')
+            .swiper-slide-caption
+              .container
+                .row.justify-content-center.justify-content-xxl-start
+                  .col-md-10.col-xxl-6
+                    .slider-modern-box
+                      h1.slider-modern-title
+                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.trainingTitle}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.trainingSub}
+                      .oh.button-wrap
+                        a.button.button-primary.button-ujarak(href='/adiestramiento' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}
+          .swiper-slide(data-slide-bg='images/slider-box-1920×729.jpg')
+            .swiper-slide-caption
+              .container
+                .row.justify-content-center.justify-content-xxl-start
+                  .col-md-10.col-xxl-6
+                    .slider-modern-box
+                      h1.slider-modern-title
+                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.box}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.boxSub}
+                      .oh.button-wrap
+                        a.button.button-primary.button-ujarak(href='https://anubis.tiendic.com/' target="_blank" data-caption-animate='slideInUp' data-caption-delay='400') #{lit.read}
+          .swiper-slide.context-dark(data-slide-bg='images/slider-allLeash-1920×729.jpg')
+            .swiper-slide-caption
+              .container
+                .row.justify-content-center.justify-content-xxl-start
+                  .col-md-10.col-xxl-6
+                    .slider-modern-box
+                      h1.slider-modern-title
+                        span(data-caption-animate='slideInLeft' data-caption-delay='0') #{lit.productsTitle}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.productsSub}
+                      .oh.button-wrap
+                        a.button.button-primary.button-ujarak(href='/products' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}              
+          //- .swiper-slide(data-slide-bg='images/slider-box-1920×729.jpg')
+          //-   .swiper-slide-caption
+          //-     .container
+          //-       .row.justify-content-center.justify-content-xxl-start
+          //-         .col-md-10.col-xxl-6
+          //-           .slider-modern-box
+          //-             h1.slider-modern-title
+          //-               span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.box}
+          //-             p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.boxSub}
+          //-             .oh.button-wrap
+          //-               a.button.button-primary.button-ujarak(href='https://anubis.tiendic.com/' target="_blank" data-caption-animate='slideInUp' data-caption-delay='400') #{lit.read}
+          .swiper-slide(data-slide-bg='images/slider-portfolio-1920×729.jpg')
+            .swiper-slide-caption
+              .container
+                .row.justify-content-center.justify-content-xxl-start
+                  .col-md-10.col-xxl-6
+                    .slider-modern-box
+                      h1.slider-modern-title
+                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.portfolioTitle}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400') Fotos y videos.
+                      .oh.button-wrap
+                        a.button.button-primary.button-ujarak(href='/portfolio' data-caption-animate='slideInUp' data-caption-delay='400') Ver
+        // Swiper Navigation
+        .swiper-button-prev
+        .swiper-button-next
+        // Swiper Pagination
+        .swiper-pagination.swiper-pagination-style-2
+      // Icons Ruby
+      section.section.section-md.bg-default.section-top-image
+       .container
+        .row.row-30.justify-content-center
+          .col-sm-6.col-lg-4.wow.fadeInRight(data-wow-delay='0s')
+            article.box-icon-ruby
+              .unit.box-icon-ruby-body.flex-column.flex-md-row.text-md-left.flex-lg-column.align-items-center.text-lg-center.flex-xl-row.text-xl-left
+                .unit-left
+                  .box-icon-ruby-icon.linearicons-leaf
+                .unit-body
+                  h4.box-icon-ruby-title Psicología canina
+          .col-sm-6.col-lg-4.wow.fadeInRight(data-wow-delay='.1s')
+            article.box-icon-ruby
+              .unit.box-icon-ruby-body.flex-column.flex-md-row.text-md-left.flex-lg-column.align-items-center.text-lg-center.flex-xl-row.text-xl-left
+                .unit-left
+                  .box-icon-ruby-icon.linearicons-shovel
+                .unit-body
+                  h4.box-icon-ruby-title Profesionalidad
+          .col-sm-6.col-lg-4.wow.fadeInRight(data-wow-delay='.2s')
+            article.box-icon-ruby
+              .unit.box-icon-ruby-body.flex-column.flex-md-row.text-md-left.flex-lg-column.align-items-center.text-lg-center.flex-xl-row.text-xl-left
+                .unit-left
+                  .box-icon-ruby-icon.linearicons-sun
+                .unit-body
+                  h4.box-icon-ruby-title Trabajo en equipo
+      // Section CTA 2
+      section.section.text-center
+        .parallax-container(data-parallax-img='images/box.jpeg')
+          .parallax-content.section-xl.section-inset-custom-1.context-dark.bg-overlay-40
+            .container
+              h2.oh.font-weight-normal
+                span.d-inline-block.wow.slideInDown(data-wow-delay='0s') Nuestra caja solidaria
+              p.oh.big.text-width-large
+                span.d-inline-block.wow.slideInUp(data-wow-delay='.2s')
+                  | Fluf in the box es una caja de juguetes y premios super divertida e interactiva. Pero no sólo eso, además de tener un montón de sorpresas para tu amigo peludo, estarás ayudando a un perro sin hogar. Porque por cada caja donaremos una parte de las ganancias a una protectora..
+              a.button.button-primary.button-icon.button-icon-left.button-ujarak(href='https://anubis.tiendic.com/' target="_blank")
+                span.icon.mdi.mdi-play
+                | Ayúdanos a ayudar
+      section.section.text-center
+        .parallax-container(data-parallax-img='images/groupClassLoranca.jpg')
+          .parallax-content.section-xl.section-inset-custom-1.context-dark.bg-overlay-40
+            .container
+              h2.oh.font-weight-normal
+                span.d-inline-block.wow.slideInDown(data-wow-delay='0s') Nuestras clases grupales
+              p.oh.big.text-width-large
+                span.d-inline-block.wow.slideInUp(data-wow-delay='.2s')
+                  | Nuestras clases grupales se basan en ejercicios de obediencia básica y avanzada sumando el desafío de las distracciones y estímulos de estar entre muchos perros con el bonus de socializar y mejorar las habilidades de manada.
+              a.button.button-primary.button-icon.button-icon-left.button-ujarak.wow.fadeInUp(href='https://youtu.be/PgL_YHsqyWM' data-lightgallery='item' data-wow-delay='.1s')
+                span.icon.mdi.mdi-play
+                | Ver presentación
+      // Team of professionals
+      section.section.section-md.bg-default
+        .container
+          .oh
+            h2.wow.slideInUp(data-wow-delay='0s') #{lit.team}
+          .row.row-30.justify-content-center
+            .col-md-6.col-lg-4.col-xl-4.wow.fadeInRight(data-wow-delay='0s')
+              // Team Classic
+              article.team-classic
+                a.team-classic-figure(href='#')
+                  img(src='images/team-abdallah-370x406.jpeg' alt='' width='370' height='406')
+                .team-classic-caption
+                  h5.team-classic-name
+                    a(href='#') Abdallah Sahili
+                  p.team-classic-status Director
+            .col-md-6.col-lg-4.col-xl-4.wow.fadeInRight(data-wow-delay='.1s')
+              // Team Classic
+              article.team-classic
+                a.team-classic-figure(href='#')
+                  img(src='images/team-talal-370x406.jpg' alt='' width='370' height='406')
+                .team-classic-caption
+                  h5.team-classic-name
+                    a(href='#') Talal Sahili
+                  p.team-classic-status Product Development
+            .col-md-6.col-lg-4.col-xl-4.wow.fadeInRight(data-wow-delay='.2s')
+              // Team Classic
+              article.team-classic
+                a.team-classic-figure(href='#')
+                  img(src='images/team-malena-370x406.jpeg' alt='' width='370' height='406')
+                .team-classic-caption
+                  h5.team-classic-name
+                    a(href='#') Malena Eichenberg
+                  p.team-classic-status Developer
+          .row.row-30.justify-content-center
+            .col-md-6.col-lg-4.col-xl-4.wow.fadeInRight(data-wow-delay='.1s')
+              // Team Classic
+              article.team-classic
+                a.team-classic-figure(href='#')
+                  img(src='images/team-sirshusirka-370x406.jpg' alt='' width='370' height='406')
+                .team-classic-caption
+                  h5.team-classic-name
+                    a(href='#') Sirshu and Sirka
+                  p.team-classic-status Adiestradores
+            .col-md-6.col-lg-4.col-xl-4.wow.fadeInRight(data-wow-delay='.2s')
+              // Team Classic
+              article.team-classic
+                a.team-classic-figure(href='#')
+                  img(src='images/team-jedi-370x406.jpeg' alt='' width='370' height='406')
+                .team-classic-caption
+                  h5.team-classic-name
+                    a(href='#') Jedi
+                  p.team-classic-status Adiestrador
+            .col-md-6.col-lg-4.col-xl-4.wow.fadeInRight(data-wow-delay='0s')
+              // Team Classic
+              article.team-classic
+                a.team-classic-figure(href='#')
+                  img(src='images/team-echo-370x406.jpeg' alt='' width='370' height='406')
+                .team-classic-caption
+                  h5.team-classic-name
+                    a(href='#') Echo
+                  p.team-classic-status Modelo            
+      // About us
+      //- section.section
+      //-   .parallax-container(data-parallax-img='images/bg-parallax-2.jpg')
+      //-     .parallax-content.section-xl.context-dark.bg-overlay-68
+      //-       .container
+      //-         .row.row-lg.row-50.justify-content-center.border-classic.border-classic-big
+      //-           .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='0s')
+      //-             .counter-creative
+      //-               .counter-creative-number
+      //-                 span.counter 12
+      //-                 span.icon.counter-creative-icon.fl-bigmug-line-trophy55
+      //-               h6.counter-creative-title Awards
+      //-           .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='.1s')
+      //-             .counter-creative
+      //-               .counter-creative-number
+      //-                 span.counter 2
+      //-                 span.symbol k
+      //-                 span.icon.counter-creative-icon.fl-bigmug-line-up104
+      //-               h6.counter-creative-title Products
+      //-           .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='.2s')
+      //-             .counter-creative
+      //-               .counter-creative-number
+      //-                 span.counter 679
+      //-                 span.icon.counter-creative-icon.fl-bigmug-line-sun81
+      //-               h6.counter-creative-title Happy Clients
+      //-           .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='.3s')
+      //-             .counter-creative
+      //-               .counter-creative-number
+      //-                 span.counter 13
+      //-                 span.icon.counter-creative-icon.fl-bigmug-line-user143
+      //-               h6.counter-creative-title Farmers
+      // Improve your interior with deco
+      section.section.section-md.bg-default.section-top-image
+        .container
+          .oh.h2-title
+            h2.wow.slideInUp(data-wow-delay='0s') Galeria
+          .row.row-30(data-lightgallery='group')
+            //- .col-sm-6.col-lg-4
+            //-   .oh-desktop
+                // Thumbnail Classic
+            // SnapWidget
+            iframe.snapwidget-widget(src='https://snapwidget.com/embed/901361' allowtransparency='true' frameborder='0' scrolling='no' style='border:none; overflow:hidden;  width:595px; height:430px; margin: auto;')
+      //- a.section.section-banner(href='https://www.templatemonster.com/intense-multipurpose-html-template.html' style='background-image: url(images/banner/background-03-1920x310.jpg); background-image: -webkit-image-set( url(images/banner/background-03-1920x310.jpg) 1x, url(images/banner/background-03-3840x620.jpg) 2x )')
+        img(src='images/banner/foreground-03-1600x310.png' srcset='images/banner/foreground-03-1600x310.png 1x, images/banner/foreground-03-3200x620.png 2x' alt='' width='1600' height='310')
+      // Page Footer
+      include footer

@@ -1,0 +1,250 @@
+extends layoutBack
+block content
+    include menu
+    div#console
+      div.calendarDates
+        form#formUser(name="adminConsole", method="post", action="/adminConsole")
+          input(type="date", placeholder="From", name="from")
+          input(type="date", placeholder="To", name="to")
+          button.submit.active(type="submit" name="login") Go
+        form#formUser(name="getByMonth", method="post", action="/adminConsole")
+          select#month(name="from", value=month)
+            option(value="") Select Month
+            - var startDate = moment('2020-01-01');
+            - var endDate = moment('2021-01-01');
+            - let result = [];
+            - while (startDate.isBefore(endDate)) {
+            - let monthDate = startDate;
+            -   result.push({month: startDate.format("MMMM YYYY"), date: startDate.format()});
+            -   startDate.add(1, 'month');
+            - }
+            each month in result
+              option(value=month.date) #{month.month}
+          button.submit.active(type="submit" name="login") Go
+
+      table.calendar
+        tbody
+          tr
+            td 
+            each val, index in calendarDates
+             td #{val}
+          tr
+            td 
+            each number, index in dogNumberArray
+             td #{number}   
+          each res in reservations
+            tr
+              td #{res.dogName}
+              - var days = getDates(res.init, res.end);
+              each val in calendarDates
+               - var initTime = moment(res.init).format('hh:mm a')
+               - var endTime = moment(res.end).format('hh:mm a')
+               if (days.includes(val) && res.type == 1 && val == moment(res.init).format('dd DD-MM-YY') && res.status != 3)
+                td.sitting
+                  a(href="#" onclick="loadReservation('"+res._id+"');") #{initTime}
+               else if (days.includes(val) && res.type == 1 && val == moment(res.end).format('dd DD-MM-YY') && res.status != 3)
+                td.sitting
+                  a(href="#" onclick="loadReservation('"+res._id+"');")  #{endTime}
+               else if (days.includes(val) && res.type == 1 && res.status != 3)
+                td.sitting
+                  a(href="#" onclick="loadReservation('"+res._id+"');")
+               else if (days.includes(val) && res.type == 2 && res.status != 3)
+                td.training 
+                  a(href="#" onclick="loadReservation('"+res._id+"');") #{initTime}
+               else if (days.includes(val) && res.type == 3 && res.status != 3)
+                td.visit  
+                  a(href="#" onclick="loadReservation('"+res._id+"');") #{initTime}
+               else if (days.includes(val) && res.type == 4 && res.status != 3)
+                td.call  
+                  a(href="#" onclick="loadReservation('"+res._id+"');") #{initTime}
+               else if (days.includes(val) && res.type == 5 && res.status != 3)
+                td.shelter  
+                  a(href="#" onclick="loadReservation('"+res._id+"');")    
+               else
+                td  
+
+              - function getDates(startDate, stopDate) {
+              -    let dateArray = [];
+              -    let currentDate = moment(startDate);
+              -    stopDate = moment(stopDate);
+              -    while (currentDate <= stopDate) {
+              -        dateArray.push( moment(currentDate).format('dd DD-MM-YY') )
+              -        currentDate = moment(currentDate).add(1, 'days');
+              -    }
+              -    return dateArray;
+              - } 
+      br
+
+      .calendar
+       .container.col-sm-4.col-md-7.mt-5
+        .card
+          h3#monthAndYear.card-header
+          table#calendar.table.table-bordered.table-responsive-sm
+            thead
+              tr.yellow
+                th.yellow Sun
+                th.yellow Mon
+                th.yellow Tue
+                th.yellow Wed
+                th.yellow Thu
+                th.yellow Fri
+                th.yellow Sat
+            tbody#calendar-body
+          .form-inline
+            button#previous.btn.btn-outline-primary.col-sm-6(onclick='previous()') Previous
+            button#next.btn.btn-outline-primary.col-sm-6(onclick='next()') Next
+          br
+          form.form-inline
+            //- label.lead.mr-2.ml-2(for='month') Jump To: 
+            //- select#month.form-control.col-sm-4(name='month' onchange='jump()')
+              option(value='0') Jan
+              option(value='1') Feb
+              option(value='2') Mar
+              option(value='3') Apr
+              option(value='4') May
+              option(value='5') Jun
+              option(value='6') Jul
+              option(value='7') Aug
+              option(value='8') Sep
+              option(value='9') Oct
+              option(value='10') Nov
+              option(value='11') Dec
+            label(for='year')
+            select#year.form-control.col-sm-4(name='year' onchange='jump()')
+              option(value='2018') 2018
+              option(value='2019') 2019
+              option(value='2020') 2020
+              option(value='2021') 2021
+              option(value='2022') 2022
+              option(value='2023') 2023
+              option(value='2024') 2024
+              option(value='2025') 2025
+              option(value='2026') 2026
+              option(value='2027') 2027
+              option(value='2028') 2028
+              option(value='2029') 2029
+              option(value='2030') 2030
+            
+    script.
+      //- //- let token = #{accessToken};
+      //- let token = !{JSON.stringify(accessToken)}
+      //- //- console.log(token);
+      //- localStorage.setItem('accessToken', token);
+      //- let headers = new Headers()
+      //- //- //- let token = localStorage.getItem(accessToken);
+      //- headers.append('Authorization',token);
+      //- //- http.method(‘/path’,{headers:headers}).then(result=>{
+
+      $('#customersList').DataTable( {
+        paging: true
+      } );
+      
+      //- document.addEventListener("DOMContentLoaded", function(event) {
+      //-     var Row  = document.getElementById('dates');
+      //-     var Cells = Row.getElementsByTagName("td");
+      //-     for (i=0; i < Cells.length; i++) {
+      //-         console.log(Cells[i].innerText);
+      //-     }
+      //- });
+
+      let today = new Date();
+      let currentMonth = today.getMonth();
+      let currentYear = today.getFullYear();
+      let selectYear = document.getElementById("year");
+      let selectMonth = document.getElementById("month");
+
+      let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+      let monthAndYear = document.getElementById("monthAndYear");
+      showCalendar(currentMonth, currentYear);
+
+
+      function next() {
+          currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
+          currentMonth = (currentMonth + 1) % 12;
+          showCalendar(currentMonth, currentYear);
+      }
+
+      function previous() {
+          currentYear = (currentMonth === 0) ? currentYear - 1 : currentYear;
+          currentMonth = (currentMonth === 0) ? 11 : currentMonth - 1;
+          showCalendar(currentMonth, currentYear);
+      }
+
+      function jump() {
+          currentYear = parseInt(selectYear.value);
+          currentMonth = parseInt(selectMonth.value);
+          showCalendar(currentMonth, currentYear);
+      }
+
+      function showCalendar(month, year) {
+          let firstDay = (new Date(year, month)).getDay();
+          let daysInMonth = 32 - new Date(year, month, 32).getDate();
+
+          let tbl = document.getElementById("calendar-body"); // body of the calendar
+
+          // clearing all previous cells
+          tbl.innerHTML = "";
+
+          // filing data about month and in the page via DOM.
+          monthAndYear.innerHTML = months[month] + " " + year;
+          selectYear.value = year;
+          selectMonth.value = month;
+
+          // creating all cells
+          let date = 1;
+          for (let i = 0; i < 6; i++) {
+              // creates a table row
+              let row = document.createElement("tr");
+
+              //creating individual cells, filing them up with data.
+              for (let j = 0; j < 7; j++) {
+                  if (i === 0 && j < firstDay) {
+                    let cell = document.createElement("td");
+                    let cellText = document.createTextNode("");
+                    cell.appendChild(cellText);
+                    row.appendChild(cell);
+                  }
+                  else if (date > daysInMonth) {
+                    break;
+                  }
+
+                  else {
+                    let cell = document.createElement("td");
+                    if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
+                      cell.classList.add("yellow");
+                    } // color today's date
+                    let cellText = document.createTextNode(date);
+                    let ul = document.createElement("ul");
+                    var reservations = JSON.parse('!{JSON.stringify(reservations)}');
+                    let totalDay = 0;
+                    for (let reservation of reservations) {
+                      let calDate = new Date(year, month, date)
+                      const resInitDay = new Date(reservation.init).setHours(0,0,0,0);
+                      if (resInitDay <= calDate && new Date(reservation.end) >= calDate) {
+                      //- if (new Date(reservation.init) <= calDate && new Date(reservation.end) >= calDate) {
+                        let li = document.createElement("li");
+                        li.appendChild(document.createTextNode(reservation.dogName + ' (' + reservation.priceDay + ')'));
+                        ul.appendChild(li);
+                        totalDay = totalDay + reservation.priceDay;
+                      }
+                    }
+                    let li = document.createElement("li");
+                    li.appendChild(document.createTextNode('Total: ' + totalDay));
+                    ul.appendChild(li);
+                    let brText = document.createTextNode('br');
+                    cell.appendChild(cellText);
+                    cell.appendChild(ul);
+                    row.appendChild(cell);
+                    date++;
+                  }
+              }
+              tbl.appendChild(row); // appending each row into calendar body.
+          }
+
+      }
+    //- script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
+    //- script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js' integrity='sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ' crossorigin='anonymous')
+    //- script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js' integrity='sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm' crossorigin='anonymous')
+  
+    

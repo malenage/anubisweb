@@ -1,0 +1,122 @@
+{
+    "en": {
+        "products": {
+            "our": "nuestros",
+            "products": "productos",
+            "allPurpose": "Correa All-Purpose",
+            "performanceH": "Arnés Performance",
+            "callBackLeash": "Correa Larga",
+            "trainTreat": "Train and Treat"
+        },
+        "portfolio": {
+            "photos": "Fotos",
+            "videos": "Videos",
+            "prev": "Ant",
+            "next": "Sig"
+        },
+        "login": {
+            "login1": "LO",
+            "login2": "G",
+            "login3": "IN",
+            "title": "MIRA EL PERFIL DE TU PERRO!",
+            "email": "Email",
+            "password": "Contraseña",
+            "log": "Entrar",
+            "recover": "Recuperar constraseña"
+        },
+        "trainingTitle": "Dog Training",
+        "trainingSub": "and behaviour modification.",
+        "box": "Fluf in the Box",
+        "boxSub": "pamper your dog while helping other dogs in need",
+        "gallery": "Gallery",
+        "read": "Read More",
+        "allPurpose": "All-Purpose Leash",
+        "performanceH": "Performance Harness",
+        "portfolioTitle": "Portfolio",
+        "productsTitle": "Pet Products",
+        "productsSub": "Original Productos, designed by Anubis for you and your best friend",
+        "contact": "Contact us",
+        "team": "Our Team",
+        "training": {
+            "who": "Who I am",
+            "title": "DOG TRAINER AND BEHAVIOURIST",
+            "paragraph1": "I am dog trainer licenced by the Spanish Cynological Federation (F.C.E) and the International Canine Federation (F.I.C).",
+            "paragraph2": "We work with all breeds and ages and we give your dog all the specialized attention that he/she needs. Each dog has its own timing and past experiences, for this reason we look for the best method for each case.",
+            "title2": "Private classes: ",
+            "paragraph3": "Puppies, basic and advanced obedience, modification of unwanted behaviors, aggressive dog rehabilitation, etc. Intensive class + homework from 50€",
+            "title3": "Group classes: ",
+            "paragraph4": "Basic and advanced obedience, discipline, walking on the leash, games and mental stimulation exercises: 25€",
+            "subtitle": "WE TRAIN",
+            "basic": "BASIC OBEDIENCE",
+            "advanced": "ADVANCED TRAINING",
+            "behaviour": "BEHAVIOUR MODIFICATION",
+            "puppies": "PUPPIES",
+            "service": "SERVICE DOGS",
+            "more": "AGGRESSIVE DOG REHABILITATION",
+            "socialization": "Socialization",
+            "aggresive": "Aggressive dogs",
+            "play": "Play",
+            "group": "En las joranadas de socialización tu perro podrá interactuar con una manada estable, aprender o reforzar las buenas conductas y corregir las malas. El centro esta acondicionado para que tu perro, ademas de aprender, haga mucho ejercicio y juegue con otros perros, siempre en un ambiente controlado, seguro y bajo supervisión.",
+            "private": "En las clases privadas asesoramos cada caso y te enseñamos a entender que es lo que tu perro necesita. Te damos todas las herramientas para que trabajes con tu perro y consigas modificar esas conductas que te llevaron a consultar con nosotros."
+        }
+    },
+    "es": {
+        "trainingTitle": "Adiestramiento",
+        "trainingSub": "y modificación de conducta",
+        "productsTitle": "Productos para mascotas",
+        "productsSub": "Productos originales, diseñados por Anubis para ti y tu mejor amig@",
+        "box": "Fluf in the Box",
+        "boxSub": "mima a tu perro mientras ayudas a otros perros necesitados",
+        "gallery": "Galería",
+        "read": "Leer Mas",
+        "contact": "Contáctanos",
+        "allPurpose": "Correa All-Purpose Leash",
+        "performanceH": "Arnés Performance",
+        "portfolioTitle": "Portfolio",
+        "team": "Nuestro Equipo",
+        "training": {
+            "who": "Quien soy",
+            "title": "ADIESTRADOR Y TECNICO MODIFICADOR DE CONDUCTA",
+            "paragraph1": "Soy adiestrador canino licenciado por la Federación Cinológica Española (F.C.E) y la Federación Internacional Canina (F.I.C).",
+            "paragraph2":  "Trabajamos con todas las razas y edades y le damos a tu perro la atención especializada que necesita. Cada perro tiene sus tiempos y sus experiencias pasadas, por lo que buscamos el mejor método para cada caso.",
+            "title2": "Clases particulares",
+            "paragraph3": "Cachorros, obediencia básica y avanzada, modificación de conductas indeseadas, rehabilitación de perros agresivos, etc. Clase intensiva + deberes para el hogar desde 50€",
+            "title3": "Clases grupales",
+            "paragraph4": "Obediencia básica y avanzada, disciplina, paseo, juegos y ejercicios de estimulación mental: 25€",
+            "subtitle": "ADIESTRAMOS",
+            "basic": "Obediencia Básica",
+            "advanced": "Avanzada",
+            "behaviour": "Conducta",
+            "puppies": "Cachorros",
+            "socialization": "Socialización",
+            "aggresive": "Perros agresivos",
+            "play": "Juego",
+            "group": "En las joranadas de socialización tu perro podrá interactuar con una manada estable, aprender o reforzar las buenas conductas y corregir las malas. El centro esta acondicionado para que tu perro, ademas de aprender, haga mucho ejercicio y juegue con otros perros, siempre en un ambiente controlado, seguro y bajo supervisión.",
+            "private": "En las clases privadas asesoramos cada caso y te enseñamos a entender que es lo que tu perro necesita. Te damos todas las herramientas para que trabajes con tu perro y consigas modificar esas conductas que te llevaron a consultar con nosotros."
+        },
+        "products": {
+            "our": "nuestros",
+            "products": "productos",
+            "allPurpose": "Correa All-Purpose",
+            "performanceH": "Arnés Performance",
+            "callBackLeash": "Correa Larga",
+            "trainTreat": "Train and Treat"
+        },
+        "portfolio": {
+            "photos": "Fotos",
+            "videos": "Videos",
+            "prev": "Ant",
+            "next": "Sig"
+        },
+        "login": {
+            "login1": "LO",
+            "login2": "G",
+            "login3": "IN",
+            "title": "MIRA EL PERFIL DE TU PERRO!",
+            "email": "Email",
+            "password": "Contraseña",
+            "log": "Entrar",
+            "recover": "Recuperar constraseña"
+        }
+    }
+}

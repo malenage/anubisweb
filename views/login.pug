@@ -1,0 +1,29 @@
+extends layout
+block content
+    .page
+      div(style='height: 30px;')
+      include header
+      // Trending products
+      section.section.section-md.bg-default
+        .container
+          .row.row-40.justify-content-center
+            .col-sm-8.col-md-7.col-lg-6.wow.fadeInLeft(data-wow-delay='0s')
+              .product-banner
+                img(src='images/interaction.jpg' alt='' width='570' height='715')
+                .product-banner-content
+                  .product-banner-inner(style='background-image: url(images/bg-brush.png)')
+                    h3.text-secondary-1 
+                    h2.text-primary Entrar
+            .col-md-5.col-lg-6
+              article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
+                .login-form.col-sm-11.clearfix
+                  form#form_login(name="login", method="post", action="/login")
+                    .form-wrap
+                      input#subscribe-form-5-email.form-input(type="text", placeholder="email", name="email")
+                      input#subscribe-form-5-email.form-input(type="password", placeholder="password", name="password", autocomplete="off")
+                      button.button.button-block.button-white(type="submit" name="login") Entrar
+                      button.button.button-block.button-white(type="submit" name="recover") Recuperar contraseña 
+              
+      // Page Footer
+      include footer                    
+    
