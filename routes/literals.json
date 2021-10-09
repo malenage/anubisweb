@@ -64,7 +64,7 @@
     "es": {
         "trainingTitle": "Adiestramiento",
         "trainingSub": "y modificación de conducta",
-        "productsTitle": "Productos para mascotas",
+        "productsTitle": "Soluciones para el paseo",
         "productsSub": "Productos originales, diseñados por Anubis para ti y tu mejor amig@",
         "store": "Tienda",
         "box": "Fluf in the Box",
@@ -97,8 +97,8 @@
             "private": "En las clases privadas asesoramos cada caso y te enseñamos a entender que es lo que tu perro necesita. Te damos todas las herramientas para que trabajes con tu perro y consigas modificar esas conductas que te llevaron a consultar con nosotros."
         },
         "products": {
-            "our": "nuestros",
-            "products": "productos",
+            "our": "soluciones para",
+            "products": "el paseo",
             "allPurpose": "Correa All-Purpose",
             "performanceH": "Arnés Performance",
             "callBackLeash": "Correa Larga",
