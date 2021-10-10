@@ -27,7 +27,7 @@
         "trainingTitle": "Dog Training",
         "trainingSub": "and behaviour modification.",
         "store": "Store",
-        "box": "Fluf in the Box",
+        "boxTitle": "Fluf in the Box",
         "boxSub": "pamper your dog while helping other dogs in need",
         "gallery": "Gallery",
         "read": "Read More",
@@ -67,7 +67,7 @@
         "productsTitle": "Soluciones para el paseo",
         "productsSub": "Productos originales, diseñados por Anubis para ti y tu mejor amig@",
         "store": "Tienda",
-        "box": "Fluf in the Box",
+        "boxTitle": "Fluf in the Box",
         "boxSub": "mima a tu perro mientras ayudas a otros perros necesitados",
         "gallery": "Galería",
         "read": "Leer Mas",
@@ -103,6 +103,13 @@
             "performanceH": "Arnés Performance",
             "callBackLeash": "Correa Larga",
             "trainTreat": "Train and Treat"
+        },
+        "box": {
+            "tit1": "fluf",
+            "tit2": "in the box",
+            "boxL": "Fluf in the Box - L",
+            "boxM": "Fluf in the Box - M",
+            "boxS": "Fluf in the Box - S"
         },
         "portfolio": {
             "photos": "Fotos",
