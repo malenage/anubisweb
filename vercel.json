@@ -1,15 +1,11 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "./index.js",
-            "use": "@vercel/node"
-        }
-    ],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "/"
+          "src": "/(.*).(js.map|js|css|txt|html|png)",
+          "headers": {
+            "cache-control": "s-maxage=31536000,immutable"
+          }
         }
-    ]
+      ]
   }

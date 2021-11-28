@@ -69,7 +69,7 @@ router.get('/allPurpose', (req, res) => {
     language = (req && req.acceptsLanguages('es')) ? 'es' : 'en';
     literalsLang = (language == 'es') ? literals.es : literals.en;
   }
-  res.render('allPurpose', {title: "All Purpose Leash | Anubis", lit: literalsLang});
+  res.render('allPurpose', {title: "Correa All Purpose | Anubis", lit: literalsLang});
 });
 
 router.get('/loginPage', (req, res) => {
@@ -320,6 +320,7 @@ router.post('/adminConsole', (req, res) => {
   async.parallel([
     mongoCommon.getReservationsByDate.bind(null, today, lastDate),
     mongoCommon.getDogs.bind(null),
+    mongoCommon.getReservations.bind(null),
   ], (err, results) => {
     if (err) {
       console.error(err);
@@ -351,6 +352,7 @@ router.post('/adminConsole', (req, res) => {
         dogs: results[1],
         dogNumberArray,
         reservations: results[0],
+        // dogTrainings: results[2].length
       });
     }
   });
