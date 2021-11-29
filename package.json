@@ -27,6 +27,7 @@
     "debug": "^4.3.2",
     "dotenv": "^6.2.0",
     "express": "^4.17.1",
+    "express-cart": "^1.1.17",
     "express-validator": "^5.3.1",
     "googleapis": "^54.1.0",
     "helmet": "^3.23.3",
