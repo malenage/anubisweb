@@ -6,17 +6,6 @@ block content
       // Swiper
       section.section.swiper-container.swiper-slider.swiper-slider-modern(data-loop='true' data-autoplay='5000' data-simulate-touch='true' data-nav='true' data-slide-effect='fade')
         .swiper-wrapper.text-left
-          .swiper-slide.context-dark(data-slide-bg='images/slider-adiestramiento-1920×729.jpg')
-            .swiper-slide-caption
-              .container
-                .row.justify-content-center.justify-content-xxl-start
-                  .col-md-10.col-xxl-6
-                    .slider-modern-box
-                      h1.slider-modern-title
-                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.trainingTitle}
-                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.trainingSub}
-                      .oh.button-wrap
-                        a.button.button-primary.button-ujarak(href='/adiestramiento' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}
           .swiper-slide.context-dark(data-slide-bg='images/slider-allLeash-1920×729.jpg')
             .swiper-slide-caption
               .container
@@ -27,7 +16,7 @@ block content
                         span(data-caption-animate='slideInLeft' data-caption-delay='0') #{lit.productsTitle}
                       p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.productsSub}
                       .oh.button-wrap
-                        a.button.button-primary.button-ujarak(href='/products' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}              
+                        a.button.button-primary.button-ujarak(href='/products' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}
           .swiper-slide(data-slide-bg='images/slider-box2-1920×729.jpg')
             .swiper-slide-caption
               .container
@@ -39,6 +28,28 @@ block content
                       p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.boxSub}
                       .oh.button-wrap
                         a.button.button-primary.button-ujarak(href='/box' data-caption-animate='slideInUp' data-caption-delay='400') #{lit.read}
+          .swiper-slide.context-dark(data-slide-bg='images/slider-adiestramiento-1920×729.jpg')
+            .swiper-slide-caption
+              .container
+                .row.justify-content-center.justify-content-xxl-start
+                  .col-md-10.col-xxl-6
+                    .slider-modern-box
+                      h1.slider-modern-title
+                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.trainingTitle}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.trainingSub}
+                      .oh.button-wrap
+                        a.button.button-primary.button-ujarak(href='/adiestramiento' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}
+          //- .swiper-slide.context-dark(data-slide-bg='images/slider-allLeash-1920×729.jpg')
+          //-   .swiper-slide-caption
+          //-     .container
+          //-       .row.justify-content-center.justify-content-xxl-start
+          //-         .col-md-10.col-xxl-6
+          //-           .slider-modern-box
+          //-             h1.slider-modern-title
+          //-               span(data-caption-animate='slideInLeft' data-caption-delay='0') #{lit.productsTitle}
+          //-             p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.productsSub}
+          //-             .oh.button-wrap
+          //-               a.button.button-primary.button-ujarak(href='/products' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}              
           .swiper-slide(data-slide-bg='images/slider-portfolio-1920×729.jpg')
             .swiper-slide-caption
               .container
@@ -80,6 +91,19 @@ block content
                   .box-icon-ruby-icon.linearicons-sun
                 .unit-body
                   h4.box-icon-ruby-title Trabajo en equipo
+      // Section CTA 2
+      section.section.text-center
+        .parallax-container(data-parallax-img='images/products/allpurpose/_RAF4918Small.jpg')
+          .parallax-content.section-xl.section-inset-custom-1.context-dark.bg-overlay-40
+            .container
+              h2.oh.font-weight-normal
+                span.d-inline-block.wow.slideInDown(data-wow-delay='0s') Correa All Purpose - 9 usos en 1
+              p.oh.big.text-width-large
+                span.d-inline-block.wow.slideInUp(data-wow-delay='.2s')
+                  | Nuestra correa más versátil: corra corta, larga, estándard, regulable, manos libres, bozal, arnés de emergencia,  para atar, correa de adiestramiento.
+              a.button.button-primary.button-icon.button-icon-left.button-ujarak.wow.fadeInUp(href='https://www.youtube.com/watch?v=4oMfQQoSDb8&t=18s' data-lightgallery='item' data-wow-delay='.1s')
+                span.icon.mdi.mdi-play
+                | Ver el video
       // Section CTA 2
       section.section.text-center
         .parallax-container(data-parallax-img='images/groupClass.jpeg')
