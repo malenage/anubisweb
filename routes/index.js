@@ -72,6 +72,14 @@ router.get('/allPurpose', (req, res) => {
   res.render('allPurpose', {title: "Correa All Purpose | Anubis", lit: literalsLang});
 });
 
+router.get('/flufLarge', (req, res) => {
+  if (!literalsLang) {
+    language = (req && req.acceptsLanguages('es')) ? 'es' : 'en';
+    literalsLang = (language == 'es') ? literals.es : literals.en;
+  }
+  res.render('fluf-L', {title: "Fluf in the box - L | Anubis", lit: literalsLang});
+});
+
 router.get('/loginPage', (req, res) => {
   res.render('login', {title: "Login | Anubis", lit: literalsLang});
 });
