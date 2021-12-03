@@ -16,7 +16,7 @@ block content
                     h2.text-primary #{lit.box.tit2}
             .col-md-5.col-lg-6
               .row.row-30.justify-content-center
-                .col-sm-6.col-md-12.col-lg-6
+                //- .col-sm-6.col-md-12.col-lg-6
                   .oh-desktop
                     // Product
                     article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
@@ -57,13 +57,15 @@ block content
                           .product-figure
                             img(src='images/flufL.jpg' alt='' width='270' height='280')
                             .product-button
-                              a.button.button-md.button-white.button-ujarak(href='/flufLarge' target="_blank") #{lit.read} 
+                              //- a.button.button-sm.button-secondary.button-ujarak(href='/flufLarge' target="_blank") #{lit.read}
+                              a.button.button-md.button-white.button-ujarak(href='https://store.anubis.pet/products/fluf-in-the-box-l' target="_blank") #{lit.read} 
                         .unit-body
                           h6.product-title
                             a(href='#') #{lit.box.boxL}
                           .product-price-wrap
                             .product-price 34,99€
-                          a.button.button-sm.button-secondary.button-ujarak(href='/flufLarge' target="_blank") #{lit.read}
+                          //- a.button.button-sm.button-secondary.button-ujarak(href='/flufLarge' target="_blank") #{lit.read}
+                          a.button.button-md.button-white.button-ujarak(href='https://store.anubis.pet/products/fluf-in-the-box-l' target="_blank") #{lit.read} 
       // Page Footer
       include footer                    
     
