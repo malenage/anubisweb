@@ -4,7 +4,7 @@ block content
       div(style='height: 30px;')
       include header
       // Swiper
-      section.section.swiper-container.swiper-slider.swiper-slider-modern(data-loop='true' data-autoplay='5000' data-simulate-touch='true' data-nav='true' data-slide-effect='fade')
+      section.section.swiper-container.swiper-slider.swiper-slider-modern(data-loop='true' data-autoplay='3000' data-simulate-touch='true' data-nav='true' data-slide-effect='fade')
         .swiper-wrapper.text-left
           .swiper-slide.context-dark(data-slide-bg='images/slider-allLeash-1920×729.jpg')
             .swiper-slide-caption
@@ -14,10 +14,10 @@ block content
                     .slider-modern-box
                       h1.slider-modern-title
                         span(data-caption-animate='slideInLeft' data-caption-delay='0') #{lit.productsTitle}
-                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.productsSub}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='300') #{lit.productsSub}
                       .oh.button-wrap
                         a.button.button-primary.button-ujarak(href='/products' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}
-          .swiper-slide(data-slide-bg='images/slider-box2-1920×729.jpg')
+          .swiper-slide(data-slide-bg='images/slider-box-navidad-1920×729.jpg')
             .swiper-slide-caption
               .container
                 .row.justify-content-center.justify-content-xxl-start
@@ -25,7 +25,8 @@ block content
                     .slider-modern-box
                       h1.slider-modern-title
                         span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.boxTitle}
-                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.boxSub}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400') Edición Navidad por solo €28!
+                      //- p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.boxSub}
                       .oh.button-wrap
                         a.button.button-primary.button-ujarak(href='/box' data-caption-animate='slideInUp' data-caption-delay='400') #{lit.read}
           .swiper-slide.context-dark(data-slide-bg='images/slider-adiestramiento-1920×729.jpg')
