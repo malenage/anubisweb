@@ -25,10 +25,9 @@ block content
                     .slider-modern-box
                       h1.slider-modern-title
                         span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.boxTitle}
-                      p(data-caption-animate='fadeInRight' data-caption-delay='400') La caja que tu perro compraría si pudiera hacer pedidos por Internet ;)
-                      //- p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.boxSub}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.boxSub}
                       .oh.button-wrap
-                        a.button.button-primary.button-ujarak(href='https://store.anubis.pet/products/fluf-in-the-box-edicion-navidad' data-caption-animate='slideInUp' data-caption-delay='400') #{lit.read}
+                        a.button.button-primary.button-ujarak(href='https://store.anubis.pet/product/arma-tu-caja' data-caption-animate='slideInUp' data-caption-delay='400') #{lit.read}
           .swiper-slide.context-dark(data-slide-bg='images/slider-adiestramiento-1920×729.jpg')
             .swiper-slide-caption
               .container
@@ -48,7 +47,7 @@ block content
                     .slider-modern-box
                       h1.slider-modern-title
                         span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.portfolioTitle}
-                      p(data-caption-animate='fadeInRight' data-caption-delay='400') Fotos y videos.
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.portfolioSub}
                       .oh.button-wrap
                         a.button.button-primary.button-ujarak(href='/portfolio' data-caption-animate='slideInUp' data-caption-delay='400') Ver
         // Swiper Navigation
@@ -56,11 +55,89 @@ block content
         .swiper-button-next
         // Swiper Pagination
         .swiper-pagination.swiper-pagination-style-2
+      // Products
+      section.section.section-md.bg-default
+        .container
+          .row.row-40.justify-content-center
+            .col-sm-8.col-md-7.col-lg-6.wow.fadeInLeft(data-wow-delay='0s')
+              .product-banner
+                img(src='images/EchoAllPurpose.jpg' alt='' width='570' height='715')
+                .product-banner-content
+                  .product-banner-inner
+                    h3.text-secondary-1 #{lit.products.our}
+                    h2.text-primary #{lit.products.products}
+            .col-md-5.col-lg-6
+              .row.row-30.justify-content-center
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/products/allpurpose/allPurposeSquare.jpg' alt='' width='270' height='280')
+                            .product-button
+                              a.button.button-md.button-white.button-ujarak(href='https://www.amazon.es/dp/B09KS2GRC1/ref=cm_sw_em_r_mt_dp_PMNS8N00DPJWN21AZA18' target='_blank') #{lit.buy}
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.products.allPurpose}
+                          .product-price-wrap
+                            //- .product-price.product-price-old 0€
+                            .product-price €32,90
+                          a.button.button-sm.button-secondary.button-ujarak(href='https://www.amazon.es/dp/B09KS2GRC1/ref=cm_sw_em_r_mt_dp_PMNS8N00DPJWN21AZA18' target='_blank') #{lit.buy}
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInLeft(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/HarnessSquare.jpg' alt='' width='270' height='280')
+                            .product-button
+                              a.button.button-md.button-white.button-ujarak(href=' https://www.amazon.es/dp/B09KWJFRN7/ref=cm_sw_em_r_mt_dp_H2F966WTEE82CAEAZA1R' target='_blank') #{lit.buy}
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.products.performanceH}
+                          .product-price-wrap
+                            .product-price €37,90+
+                          a.button.button-sm.button-secondary.button-ujarak(href=' https://www.amazon.es/dp/B09KWJFRN7/ref=cm_sw_em_r_mt_dp_H2F966WTEE82CAEAZA1R' target='_blank') #{lit.buy}
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInLeft(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/longSquare.jpg' alt='' width='270' height='280')
+                            .product-button
+                              a.button.button-md.button-white.button-ujarak(href='https://www.amazon.es/dp/B09KWDJVGS/ref=cm_sw_em_r_mt_dp_FRJXJVFKV8CX6TWGNBZ7' target='_blank') #{lit.buy}  
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.products.callBackLeash}
+                          .product-price-wrap
+                            .product-price €21,80€
+                          a.button.button-sm.button-secondary.button-ujarak(href='https://www.amazon.es/dp/B09KWDJVGS/ref=cm_sw_em_r_mt_dp_FRJXJVFKV8CX6TWGNBZ7' target='_blank') #{lit.buy}
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/beltSquare.jpg' alt='' width='270' height='280')
+                            .product-button
+                              a.button.button-md.button-white.button-ujarak(href='https://www.amazon.es/dp/B09KW9GFV1/ref=cm_sw_em_r_mt_dp_E219M8SBBXJ2ZNDJ6KWS' target='_blank') #{lit.buy}
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.products.trainTreat}
+                          .product-price-wrap
+                            .product-price €31,90
+                          a.button.button-sm.button-secondary.button-ujarak(href='https://www.amazon.es/dp/B09KW9GFV1/ref=cm_sw_em_r_mt_dp_E219M8SBBXJ2ZNDJ6KWS' target='_blank') #{lit.buy}
       // Gallery
       section.section.section-md.bg-default.section-top-image
         .container
           .oh.h2-title
-            h2.wow.slideInUp(data-wow-delay='0s') Galeria
+            h2.wow.slideInUp(data-wow-delay='0s') #{lit.gallery}
           .row.row-30(data-lightgallery='group')
             .col-sm-6.col-lg-4
               .oh-desktop
