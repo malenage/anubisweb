@@ -1,0 +1,89 @@
+extends layout
+block content
+    .page
+      div(style='height: 30px;')
+      include header
+      // Trending products
+      section.section.section-md.bg-default
+        .container
+          .row.row-40.justify-content-center
+            .col-sm-8.col-md-7.col-lg-6.wow.fadeInLeft(data-wow-delay='0s')
+              .product-banner
+                img(src='images/hoodie-black-front.png' alt='' width='570' height='715')
+                .product-button
+                  a.button.button-md.button-white.button-ujarak(href='https://store.anubis.pet/product/anubis-unisex-hoodie' target='_blank') #{lit.buy}
+                //- .product-banner-content
+                  //- .product-banner-inner
+                  //-   h3.text-secondary-1 #{lit.merch.our}
+                  //-   h2.text-primary #{lit.merch.merch}
+            .col-md-5.col-lg-6
+              .row.row-30.justify-content-center
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/mens-fitted-straight-cut-t-shirt-black.png' alt='' width='270' height='280')
+                            .product-button
+                              a.button.button-md.button-white.button-ujarak(href='https://store.anubis.pet/product/short-sleeve-unisex-t-shirt' target='_blank') #{lit.buy}
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.merch.menTShirt}
+                          .product-price-wrap
+                            //- .product-price.product-price-old 0€
+                            //- .product-price €32,90
+                          a.button.button-sm.button-secondary.button-ujarak(href='https://store.anubis.pet/product/correa-all-purpose-anubis-pet' target='_blank') #{lit.read}
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInLeft(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/womens-basic-organic-t-shirt-deep-black-front2.png' alt='' width='270' height='280')
+                            .product-button
+                              a.button.button-md.button-white.button-ujarak(href='https://store.anubis.pet/product/arnes-performance-anubis-pet' target='_blank') #{lit.buy}
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.merch.womenTShirt}
+                          .product-price-wrap
+                            //- .product-price €37,90+
+                          a.button.button-sm.button-secondary.button-ujarak(href='https://store.anubis.pet/product/arnes-performance-anubis-pet' target='_blank') #{lit.read}
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInLeft(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/toddler-staple-tee-black-front.png' alt='' width='270' height='280')
+                            .product-button
+                              a.button.button-md.button-white.button-ujarak(href='https://www.amazon.es/dp/B09KWDJVGS/ref=cm_sw_em_r_mt_dp_FRJXJVFKV8CX6TWGNBZ7' target='_blank') #{lit.read}  
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.merch.kidsTShirt}
+                          .product-price-wrap
+                            //- .product-price €21,80€
+                          a.button.button-sm.button-secondary.button-ujarak(href='https://www.amazon.es/dp/B09KWDJVGS/ref=cm_sw_em_r_mt_dp_FRJXJVFKV8CX6TWGNBZ7' target='_blank') #{lit.read}
+                .col-sm-6.col-md-12.col-lg-6
+                  .oh-desktop
+                    // Product
+                    article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
+                      .unit.flex-row.flex-lg-column
+                        .unit-left
+                          .product-figure
+                            img(src='images/baby-short-sleeve-one-piece-black-front.png' alt='' width='270' height='280')
+                            .product-button
+                              //- a.button.button-md.button-white.button-ujarak(href='https://www.amazon.es/dp/B09KW9GFV1/ref=cm_sw_em_r_mt_dp_E219M8SBBXJ2ZNDJ6KWS' target='_blank') #{lit.buy}
+                              a.button.button-md.button-white.button-ujarak(href='https://store.anubis.pet/product/cinturon-con-correa-train-and-treat-anubis-pet' target='_blank') #{lit.buy}
+                        .unit-body
+                          h6.product-title
+                            a(href='#') #{lit.merch.babyOnePiece}
+                          .product-price-wrap
+                            //- .product-price €31,90
+                          a.button.button-sm.button-secondary.button-ujarak(href='https://store.anubis.pet/product/cinturon-con-correa-train-and-treat-anubis-pet' target='_blank') #{lit.read}
+      // Page Footer
+      include footer                    
+    

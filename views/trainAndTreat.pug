@@ -1,0 +1,170 @@
+extends layout
+block content
+    .page
+      div(style='height: 30px;')
+      include header
+      // Trending products
+      section.section.section-md.bg-default
+        .container
+          .row.row-50
+            .col-lg-6
+              .slick-product
+                // Slick Carousel
+                .carousel-parent.slick-initialized.slick-slider(data-swipe='true' data-items='1' data-child='#child-carousel' data-for='#child-carousel')
+                  .slick-list.draggable(aria-live='polite')
+                    .slick-track(style='opacity: 1; width: 1275px; transform: translate3d(0px, 0px, 0px);' role='listbox')
+                      .item.slick-slide.slick-current.slick-active(style='width: 425px;' tabindex='-1' role='option' aria-describedby='slick-slide00' data-slick-index='0' aria-hidden='false')
+                        .slick-product-figure
+                          img(src='images/products/belt/_RAF4962Small.jpg' alt='' width='530' height='480')
+                      //- .item.slick-slide(style='width: 425px;' tabindex='-1' role='option' aria-describedby='slick-slide01' data-slick-index='1' aria-hidden='true')
+                      //-   .slick-product-figure
+                      //-     img(src='images/_RAF4918Small.jpg' alt='' width='530' height='480')
+                      //- .item.slick-slide(style='width: 425px;' tabindex='-1' role='option' aria-describedby='slick-slide02' data-slick-index='2' aria-hidden='true')
+                      //-   .slick-product-figure
+                      //-     img(src='images/products/allpurpose/_RAF4918Small.jpg' alt='' width='530' height='480')
+                //- #child-carousel.child-carousel.slick-initialized.slick-slider(data-for='.carousel-parent' data-arrows='true' data-items='3' data-sm-items='3' data-md-items='3' data-lg-items='3' data-xl-items='3' data-slide-to-scroll='1' data-md-vertical='true')
+                  .slick-list.draggable(aria-live='polite')
+                    .slick-track(style='opacity: 1; width: 438px; transform: translate3d(0px, 0px, 0px);' role='listbox')
+                      .item.slick-slide.slick-active.slick-current(style='width: 134px;' tabindex='-1' role='option' aria-describedby='slick-slide10' data-slick-index='0' aria-hidden='false')
+                        .slick-product-figure
+                          img(src='images/products/allpurpose/allPurposeSquare.jpg' alt='' width='169' height='152')
+                      .item.slick-slide.slick-active(style='width: 134px;' tabindex='-1' role='option' aria-describedby='slick-slide11' data-slick-index='1' aria-hidden='false')
+                        .slick-product-figure
+                          img(src='images/products/allpurpose/_RAF4918Small.jpg' alt='' width='169' height='152')
+                      .item.slick-slide.slick-active(style='width: 134px;' tabindex='-1' role='option' aria-describedby='slick-slide12' data-slick-index='2' aria-hidden='false')
+                        .slick-product-figure
+                          img(src='images/products/allpurpose/_RAF4918Small.jpg' alt='' width='169' height='152')
+                      //- .item.slick-slide.slick-active(style='width: 134px;' tabindex='-1' role='option' aria-describedby='slick-slide12' data-slick-index='2' aria-hidden='false')
+                        .slick-product-figure
+                          img(src='images/products/allpurpose/_RAF4918Small.jpg' alt='' width='169' height='152')
+                      //- .item.slick-slide.slick-active(style='width: 134px;' tabindex='-1' role='option' aria-describedby='slick-slide12' data-slick-index='2' aria-hidden='false')
+                        .slick-product-figure
+                          img(src='images/products/allpurpose/_RAF4918Small.jpg' alt='' width='169' height='152')
+                      //- .item.slick-slide.slick-active(style='width: 134px;' tabindex='-1' role='option' aria-describedby='slick-slide12' data-slick-index='2' aria-hidden='false')
+                        .slick-product-figure
+                          img(src='images/products/allpurpose/_RAF4918Small.jpg' alt='' width='169' height='152')            
+            .col-lg-6
+              .single-product
+                h3 #{lit.products.trainTreat}
+                //- .group-md.group-middle
+                //-   .single-product-price $15.90
+                //-   .box-rating
+                //-     span.icon.fa.fa-star
+                //-     span.icon.fa.fa-star
+                //-     span.icon.fa.fa-star
+                //-     span.icon.fa.fa-star
+                //-     span.icon.fa.fa-star-half-o
+                p • La correa manos libres Train and Treat es ideal para ir de paseo, entrenar y adiestrar a tu perro.
+                p • Se compone de un cinturón reforzado, dos bolsos y una correa manos libres.
+                p • El cinturón es reflectante, regulable y viene en dos tamaños (M/L).
+                p • M - 75 a 98 cm de cintura
+                p • L - 91 a 127cm de cintura
+                p • La correa tiene mosquetones a ambos lados y empuñadura.
+                p • Los mosquetones tienen hebilla giratoria 360°
+                p • Sistema de doble seguridad para que no se abran.
+                p • Los enganches y clips son todos de metal para dar extra seguridad.
+
+                //- .divider.divider-30
+                //- ul.list.list-description.d-inline-block.d-md-block
+                //-   li
+                //-     span La correa 
+                //-     span está fabricada con cuerda de alta resistencia y material reflectante.
+                //-   li
+                //-     span Todos sus mosquetones 
+                //-     span son de la más alta calidad y durabilidad.
+                //-   li
+                //-     span El resorte 
+                //-     span al comienzo de la correa provee amortiguación.
+                //-   li
+                //-     span El collar deslizante  
+                //-     span tiene topes regulables a ambos lados para no lastimar el cuello de tu perro y que no pueda salirse de él.
+                //-   li
+                //-     span Un mango acolchado  
+                //-     span protegerá la nariz de tu perro al usar la función de bozal.
+                //-   li
+                //-     span El agarre  
+                //-     span de la correa posee un mango acolchado para su comodidad. 
+                .group-sm.group-middle
+                  //- .product-stepper
+                    //- .stepper
+                    //-   input.form-input.stepper-input(type='number' data-zeros='true' value='1' min='1' max='1000')
+                    //-   span.stepper-arrow.up
+                    //-   span.stepper-arrow.down
+                  div
+                    a.button.button-primary.button-pipaluk(href='https://www.amazon.es/Anubis-Correa-Libres-Resistente-Bolsos/dp/B09KW9GFV1' target='_blank') #{lit.buy}
+                .divider.divider-40
+                //- .group-md.group-middle
+                  span.social-title Share
+                  div
+                    ul.list-inline.list-inline-sm.social-list
+                      li
+                        a.icon.fa.fa-facebook(href='#')
+                      li
+                        a.icon.fa.fa-twitter(href='#')
+                      li
+                        a.icon.fa.fa-google-plus(href='#')
+                      li
+                        a.icon.fa.fa-instagram(href='#')
+          // Bootstrap tabs
+          //- #tabs-5.tabs-custom.tabs-horizontal.tabs-corporate
+            // Nav tabs
+            ul.nav.nav-tabs
+              li.nav-item(role='presentation')
+                a.nav-link.active(href='#tabs-5-1' data-toggle='tab') Testimonials (1)
+              li.nav-item(role='presentation')
+                a.nav-link(href='#tabs-5-2' data-toggle='tab') Additional information
+              li.nav-item(role='presentation')
+                a.nav-link(href='#tabs-5-3' data-toggle='tab') Delivery and payment
+            // Tab panes
+            .tab-content
+              #tabs-5-1.tab-pane.fade.show.active
+                .box-comment
+                  .unit.unit-spacing-md.flex-column.flex-md-row.align-items-lg-center
+                    .unit-left
+                      a.box-comment-figure(href='#')
+                        img(src='images/user-1-119x119.jpg' alt='' width='119' height='119')
+                    .unit-body
+                      .group-sm.group-justify
+                        div
+                          .group-sm.group-middle
+                            p.box-comment-author
+                              a(href='#') John Doe
+                            .box-rating
+                              span.icon.fa.fa-star
+                              span.icon.fa.fa-star
+                              span.icon.fa.fa-star
+                              span.icon.fa.fa-star
+                              span.icon.fa.fa-star-half-o
+                        .box-comment-time
+                          time(datetime='2018-11-30') Nov 30, 2018
+                      p.box-comment-text
+                        | The product you delivered me has surpassed all my expectations. The item is one of the best, all-purpose items ever crafted. I love everything about my purchase. Reliable, secure, quirky, easy to clean in and out.
+                h5.text-spacing-100.font-weight-normal Add Your Comment
+                form.rd-form.rd-mailform(novalidate='novalidate')
+                  .row.row-14.gutters-14
+                    .col-sm-6
+                      .form-wrap
+                        input#contact-your-name-4.form-input.form-control-has-validation(type='text' name='name' data-constraints='@Required')
+                        span.form-validation
+                        label.form-label.rd-input-label(for='contact-your-name-4') Your Name
+                    .col-sm-6
+                      .form-wrap
+                        input#contact-email-4.form-input.form-control-has-validation(type='email' name='email' data-constraints='@Email @Required')
+                        span.form-validation
+                        label.form-label.rd-input-label(for='contact-email-4') Your E-mail
+                    .col-12
+                      .form-wrap
+                        label.form-label.rd-input-label(for='contact-message-4') Message
+                        textarea#contact-message-4.form-input.textarea-lg.form-control-has-validation.form-control-last-child(name='message' data-constraints='@Required')
+                        span.form-validation
+                  button.button.button-primary.button-pipaluk(type='submit') Submit
+              #tabs-5-2.tab-pane.fade
+                p
+                  | Here you will find more useful information about the chosen product. It&rsquo;s always good to have the choice we can offer. We try to cater to the needs of each and every whimsical buyer. This product is qualitative and affordable at the same time. Take advantage of this product&rsquo;s benefits and you&apos;ll see that this is exactly the product you need. Besides you can save your money on account of the lowest prices.
+              #tabs-5-3.tab-pane.fade
+                p
+                  | Here you can read some details about a nifty little lifecycle of your order&apos;s journey from the time you place your order to your new treasures arriving at your doorstep. At first you choose the product you like. Then you put into your shopping cart and pass the checkout process in a few clicks. Our store offers several payment and delivery methods, so you have an opportunity to choose which one is the most convenient for you.
+
+      // Page Footer
+      include footer                    
+    
