@@ -22,7 +22,7 @@
     "bcrypt": "^5.0.1",
     "cloudinary": "^1.30.0",
     "cookie-parser": "^1.4.6",
-    "core-js": "^3.22.5",
+    "core-js": "^3.22.7",
     "cors": "^2.8.5",
     "cron": "^1.8.2",
     "debug": "^4.3.4",
