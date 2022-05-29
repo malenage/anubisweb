@@ -6,6 +6,28 @@ block content
       // Swiper
       section.section.swiper-container.swiper-slider.swiper-slider-modern(data-loop='true' data-autoplay='3000' data-simulate-touch='true' data-nav='true' data-slide-effect='fade')
         .swiper-wrapper.text-left
+          .swiper-slide.context-dark(data-slide-bg='images/slider-nft-1920×729.jpg')
+            .swiper-slide-caption
+              .container
+                .row.justify-content-center.justify-content-xxl-start
+                  .col-md-10.col-xxl-6
+                    .slider-modern-box
+                      h1.slider-modern-title
+                        span(data-caption-animate='slideInLeft' data-caption-delay='0') #{lit.nftTitle}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='300') #{lit.nftSub}
+                      .oh.button-wrap
+                        a.button.button-primary.button-ujarak(href='/nfts' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}
+          .swiper-slide(data-slide-bg='images/slider-coin-1920×729.jpg')
+            .swiper-slide-caption
+              .container
+                .row.justify-content-center.justify-content-xxl-start
+                  .col-md-10.col-xxl-6
+                    .slider-modern-box
+                      h1.slider-modern-title
+                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.coinTitle}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.coinSub}
+                      .oh.button-wrap
+                        a.button.button-primary.button-ujarak(href='/anubiscoin' data-caption-animate='slideInUp' data-caption-delay='400') #{lit.read}
           .swiper-slide.context-dark(data-slide-bg='images/slider-allLeash-1920×729.jpg')
             .swiper-slide-caption
               .container
@@ -13,43 +35,21 @@ block content
                   .col-md-10.col-xxl-6
                     .slider-modern-box
                       h1.slider-modern-title
-                        span(data-caption-animate='slideInLeft' data-caption-delay='0') #{lit.productsTitle}
-                      p(data-caption-animate='fadeInRight' data-caption-delay='300') #{lit.productsSub}
+                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.productsTitle}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.productsSub}
                       .oh.button-wrap
                         a.button.button-primary.button-ujarak(href='/products' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}
-          .swiper-slide(data-slide-bg='images/slider-box-arma-1920×729.jpg')
+          .swiper-slide(data-slide-bg='images/slider-merch-1920×729.jpg')
             .swiper-slide-caption
               .container
                 .row.justify-content-center.justify-content-xxl-start
                   .col-md-10.col-xxl-6
                     .slider-modern-box
                       h1.slider-modern-title
-                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.boxTitle}
-                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.boxSub}
+                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.merchTitle}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400')
                       .oh.button-wrap
-                        a.button.button-primary.button-ujarak(href='https://store.anubis.pet/product/arma-tu-caja' data-caption-animate='slideInUp' data-caption-delay='400') #{lit.read}
-          .swiper-slide.context-dark(data-slide-bg='images/slider-adiestramiento-1920×729.jpg')
-            .swiper-slide-caption
-              .container
-                .row.justify-content-center.justify-content-xxl-start
-                  .col-md-10.col-xxl-6
-                    .slider-modern-box
-                      h1.slider-modern-title
-                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.trainingTitle}
-                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.trainingSub}
-                      .oh.button-wrap
-                        a.button.button-primary.button-ujarak(href='/adiestramiento' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}           
-          .swiper-slide(data-slide-bg='images/slider-portfolio-1920×729.jpg')
-            .swiper-slide-caption
-              .container
-                .row.justify-content-center.justify-content-xxl-start
-                  .col-md-10.col-xxl-6
-                    .slider-modern-box
-                      h1.slider-modern-title
-                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.portfolioTitle}
-                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.portfolioSub}
-                      .oh.button-wrap
-                        a.button.button-primary.button-ujarak(href='/portfolio' data-caption-animate='slideInUp' data-caption-delay='400') Ver
+                        a.button.button-primary.button-ujarak(href='/merch' data-caption-animate='slideInUp' data-caption-delay='400') #{lit.buy}
         // Swiper Navigation
         .swiper-button-prev
         .swiper-button-next
@@ -59,13 +59,13 @@ block content
       section.section.section-md.bg-default
         .container
           .row.row-40.justify-content-center
-            .col-sm-8.col-md-7.col-lg-6.wow.fadeInLeft(data-wow-delay='0s')
-              .product-banner
-                img(src='images/EchoAllPurpose.jpg' alt='' width='570' height='715')
-                .product-banner-content
-                  .product-banner-inner
-                    h3.text-secondary-1 #{lit.products.our}
-                    h2.text-primary #{lit.products.products}
+            //- .col-sm-8.col-md-7.col-lg-6.wow.fadeInLeft(data-wow-delay='0s')
+            //-   .product-banner
+            //-     img(src='images/EchoAllPurpose.jpg' alt='' width='570' height='715')
+            //-     .product-banner-content
+            //-       .product-banner-inner
+            //-         h3.text-secondary-1 #{lit.products.our}
+            //-         h2.text-primary #{lit.products.products}
             .col-md-5.col-lg-6
               .row.row-30.justify-content-center
                 .col-sm-6.col-md-12.col-lg-6
@@ -75,17 +75,14 @@ block content
                       .unit.flex-row.flex-lg-column
                         .unit-left
                           .product-figure
-                            img(src='images/products/allpurpose/allPurposeSquare.jpg' alt='' width='270' height='280')
+                            img(src='images/sample1.png' alt='' width='270' height='280')
                             .product-button
-                              //- a.button.button-md.button-white.button-ujarak(href='https://www.amazon.es/dp/B09KS2GRC1/ref=cm_sw_em_r_mt_dp_PMNS8N00DPJWN21AZA18' target='_blank') #{lit.buy}
-                              a.button.button-md.button-white.button-ujarak(href='https://store.anubis.pet/product/correa-all-purpose-anubis-pet' target='_blank') #{lit.buy}
+                              a.button.button-md.button-white.button-ujarak(href='/nfts' target='_blank') #{lit.read}
                         .unit-body
                           h6.product-title
-                            a(href='#') #{lit.products.allPurpose}
+                            a(href='#') #{lit.nftTitle}
                           .product-price-wrap
-                            //- .product-price.product-price-old 0€
-                            //- .product-price €32,90
-                          a.button.button-sm.button-secondary.button-ujarak(href='https://store.anubis.pet/product/correa-all-purpose-anubis-pet' target='_blank') #{lit.buy}
+                          a.button.button-sm.button-secondary.button-ujarak(href='/nfts' target='_blank') #{lit.read}
                 .col-sm-6.col-md-12.col-lg-6
                   .oh-desktop
                     // Product
@@ -93,16 +90,15 @@ block content
                       .unit.flex-row.flex-lg-column
                         .unit-left
                           .product-figure
-                            img(src='images/HarnessSquare.jpg' alt='' width='270' height='280')
+                            img(src='images/Moneda.png' alt='' width='270' height='280')
                             .product-button
-                              //- a.button.button-md.button-white.button-ujarak(href=' https://www.amazon.es/dp/B09KWJFRN7/ref=cm_sw_em_r_mt_dp_H2F966WTEE82CAEAZA1R' target='_blank') #{lit.buy}
-                              a.button.button-md.button-white.button-ujarak(href='https://store.anubis.pet/product/arnes-performance-anubis-pet' target='_blank') #{lit.buy}
+                              a.button.button-md.button-white.button-ujarak(href='/anubiscoin' target='_blank') #{lit.read}
                         .unit-body
                           h6.product-title
-                            a(href='#') #{lit.products.performanceH}
+                            a(href='#') #{lit.coinTitle}
                           .product-price-wrap
                             //- .product-price €37,90+
-                          a.button.button-sm.button-secondary.button-ujarak(href='https://store.anubis.pet/product/arnes-performance-anubis-pet' target='_blank') #{lit.buy}
+                          a.button.button-sm.button-secondary.button-ujarak(href='/anubiscoin' target='_blank') #{lit.read}
                 .col-sm-6.col-md-12.col-lg-6
                   .oh-desktop
                     // Product
@@ -110,15 +106,15 @@ block content
                       .unit.flex-row.flex-lg-column
                         .unit-left
                           .product-figure
-                            img(src='images/longSquare.jpg' alt='' width='270' height='280')
+                            img(src='images/mens-fitted-straight-cut-t-shirt-black-front.png' alt='' width='270' height='280')
                             .product-button
-                              a.button.button-md.button-white.button-ujarak(href='https://www.amazon.es/dp/B09KWDJVGS/ref=cm_sw_em_r_mt_dp_FRJXJVFKV8CX6TWGNBZ7' target='_blank') #{lit.buy}  
+                              a.button.button-md.button-white.button-ujarak(href='/merch' target='_blank') #{lit.buy}  
                         .unit-body
                           h6.product-title
-                            a(href='#') #{lit.products.callBackLeash}
+                            a(href='#') #{lit.merchTitle}
                           .product-price-wrap
                             //- .product-price €21,80€
-                          a.button.button-sm.button-secondary.button-ujarak(href='https://www.amazon.es/dp/B09KWDJVGS/ref=cm_sw_em_r_mt_dp_FRJXJVFKV8CX6TWGNBZ7' target='_blank') #{lit.buy}
+                          a.button.button-sm.button-secondary.button-ujarak(href='/merch' target='_blank') #{lit.buy}
                 .col-sm-6.col-md-12.col-lg-6
                   .oh-desktop
                     // Product
@@ -128,14 +124,13 @@ block content
                           .product-figure
                             img(src='images/beltSquare.jpg' alt='' width='270' height='280')
                             .product-button
-                              //- a.button.button-md.button-white.button-ujarak(href='https://www.amazon.es/dp/B09KW9GFV1/ref=cm_sw_em_r_mt_dp_E219M8SBBXJ2ZNDJ6KWS' target='_blank') #{lit.buy}
-                              a.button.button-md.button-white.button-ujarak(href='https://store.anubis.pet/product/cinturon-con-correa-train-and-treat-anubis-pet' target='_blank') #{lit.buy}
+                              a.button.button-md.button-white.button-ujarak(href='/products' target='_blank') #{lit.buy}
                         .unit-body
                           h6.product-title
-                            a(href='#') #{lit.products.trainTreat}
+                            a(href='#') #{lit.productsTitle}
                           .product-price-wrap
                             //- .product-price €31,90
-                          a.button.button-sm.button-secondary.button-ujarak(href='https://store.anubis.pet/product/cinturon-con-correa-train-and-treat-anubis-pet' target='_blank') #{lit.buy}
+                          a.button.button-sm.button-secondary.button-ujarak(href='/products' target='_blank') #{lit.buy}
       // Gallery
       section.section.section-md.bg-default.section-top-image
         .container
@@ -230,19 +225,6 @@ block content
               a.button.button-primary.button-icon.button-icon-left.button-ujarak.wow.fadeInUp(href='https://www.youtube.com/watch?v=4oMfQQoSDb8&t=18s' data-lightgallery='item' data-wow-delay='.1s')
                 span.icon.mdi.mdi-play
                 | #{lit.watch}
-      // Section CTA 2
-      section.section.text-center
-        .parallax-container(data-parallax-img='images/groupClass.jpeg')
-          .parallax-content.section-xl.section-inset-custom-1.context-dark.bg-overlay-40
-            .container
-              h2.oh.font-weight-normal
-                span.d-inline-block.wow.slideInDown(data-wow-delay='0s') Nuestras clases grupales
-              p.oh.big.text-width-large
-                span.d-inline-block.wow.slideInUp(data-wow-delay='.2s')
-                  | Nuestras clases grupales se basan en ejercicios de obediencia básica y avanzada sumando el desafío de las distracciones y estímulos de estar entre muchos perros con el bonus de socializar y mejorar las habilidades de manada.
-              a.button.button-primary.button-icon.button-icon-left.button-ujarak.wow.fadeInUp(href='https://youtu.be/PgL_YHsqyWM' data-lightgallery='item' data-wow-delay='.1s')
-                span.icon.mdi.mdi-play
-                | Ver presentación
       // Team of professionals
       section.section.section-md.bg-default
         .container
@@ -257,16 +239,7 @@ block content
                 .team-classic-caption
                   h5.team-classic-name
                     a(href='#') Abdallah Sahili
-                  p.team-classic-status Director
-            .col-md-6.col-lg-4.col-xl-4.wow.fadeInRight(data-wow-delay='.1s')
-              // Team Classic
-              article.team-classic
-                a.team-classic-figure(href='#')
-                  img(src='images/team-talal-370x406.jpg' alt='' width='370' height='406')
-                .team-classic-caption
-                  h5.team-classic-name
-                    a(href='#') Talal Sahili
-                  p.team-classic-status Product Development
+                  p.team-classic-status CEO
             .col-md-6.col-lg-4.col-xl-4.wow.fadeInRight(data-wow-delay='.2s')
               // Team Classic
               article.team-classic
@@ -276,25 +249,6 @@ block content
                   h5.team-classic-name
                     a(href='#') Malena Eichenberg
                   p.team-classic-status Developer
-          .row.row-30.justify-content-center
-            .col-md-6.col-lg-4.col-xl-4.wow.fadeInRight(data-wow-delay='.1s')
-              // Team Classic
-              article.team-classic
-                a.team-classic-figure(href='#')
-                  img(src='images/team-sirka-370x406.jpg' alt='' width='370' height='406')
-                .team-classic-caption
-                  h5.team-classic-name
-                    a(href='#') Sirka
-                  p.team-classic-status Adiestradora
-            .col-md-6.col-lg-4.col-xl-4.wow.fadeInRight(data-wow-delay='.2s')
-              // Team Classic
-              article.team-classic
-                a.team-classic-figure(href='#')
-                  img(src='images/team-jedi-370x406.jpeg' alt='' width='370' height='406')
-                .team-classic-caption
-                  h5.team-classic-name
-                    a(href='#') Jedi
-                  p.team-classic-status Adiestrador
             .col-md-6.col-lg-4.col-xl-4.wow.fadeInRight(data-wow-delay='0s')
               // Team Classic
               article.team-classic
@@ -303,38 +257,39 @@ block content
                 .team-classic-caption
                   h5.team-classic-name
                     a(href='#') Echo
-                  p.team-classic-status Modelo            
+                  p.team-classic-status Modelo
       // About us
-      //- section.section
-      //-   .parallax-container(data-parallax-img='images/bg-parallax-2.jpg')
-      //-     .parallax-content.section-xl.context-dark.bg-overlay-68
-      //-       .container
-      //-         .row.row-lg.row-50.justify-content-center.border-classic.border-classic-big
-      //-           .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='0s')
-      //-             .counter-creative
-      //-               .counter-creative-number
-      //-                 span.counter 12
-      //-                 span.icon.counter-creative-icon.fl-bigmug-line-trophy55
-      //-               h6.counter-creative-title Awards
-      //-           .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='.1s')
-      //-             .counter-creative
-      //-               .counter-creative-number
-      //-                 span.counter 2
-      //-                 span.symbol k
-      //-                 span.icon.counter-creative-icon.fl-bigmug-line-up104
-      //-               h6.counter-creative-title Products
-      //-           .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='.2s')
-      //-             .counter-creative
-      //-               .counter-creative-number
-      //-                 span.counter 679
-      //-                 span.icon.counter-creative-icon.fl-bigmug-line-sun81
-      //-               h6.counter-creative-title Happy Clients
-      //-           .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='.3s')
-      //-             .counter-creative
-      //-               .counter-creative-number
-      //-                 span.counter 13
-      //-                 span.icon.counter-creative-icon.fl-bigmug-line-user143
-      //-               h6.counter-creative-title Farmers
+      section.section
+        .parallax-container(data-parallax-img='images/bg-parallax-2.jpg')
+          .parallax-content.section-xl.context-dark.bg-overlay-68
+            .container
+              .row.row-lg.row-50.justify-content-center.border-classic.border-classic-big
+                .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='0s')
+                  .counter-creative
+                    .counter-creative-number
+                      span.counter 2
+                      span.symbol K
+                      span.icon.counter-creative-icon.fl-bigmug-line-trophy55
+                    h6.counter-creative-title NFTs
+                .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='.1s')
+                  .counter-creative
+                    .counter-creative-number
+                      span.counter 2
+                      span.symbol B
+                      span.icon.counter-creative-icon.fl-bigmug-line-up104
+                    h6.counter-creative-title Anubiscoins
+                .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='.2s')
+                  .counter-creative
+                    .counter-creative-number
+                      span.counter 3
+                      span.icon.counter-creative-icon.fl-bigmug-line-sun81
+                    h6.counter-creative-title Dog Products
+                .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='.3s')
+                  .counter-creative
+                    .counter-creative-number
+                      span.counter 5
+                      span.icon.counter-creative-icon.fl-bigmug-line-user143
+                    h6.counter-creative-title Human Products
             
           //- .row.row-30(data-lightgallery='group')
             //- .col-sm-6.col-lg-4

@@ -72,12 +72,52 @@ router.get('/allPurpose', (req, res) => {
   res.render('allPurpose', {title: "Correa All Purpose | Anubis", lit: literalsLang});
 });
 
-router.get('/flufLarge', (req, res) => {
+router.get('/harness', (req, res) => {
   if (!literalsLang) {
     language = (req && req.acceptsLanguages('es')) ? 'es' : 'en';
     literalsLang = (language == 'es') ? literals.es : literals.en;
   }
-  res.render('fluf-L', {title: "Fluf in the box - L | Anubis", lit: literalsLang});
+  res.render('harness', {title: "All Purpose Harness| Anubis", lit: literalsLang});
+});
+
+router.get('/longLeash', (req, res) => {
+  if (!literalsLang) {
+    language = (req && req.acceptsLanguages('es')) ? 'es' : 'en';
+    literalsLang = (language == 'es') ? literals.es : literals.en;
+  }
+  res.render('longLeash', {title: "Long Leash | Anubis", lit: literalsLang});
+});
+
+router.get('/trainAndTreat', (req, res) => {
+  if (!literalsLang) {
+    language = (req && req.acceptsLanguages('es')) ? 'es' : 'en';
+    literalsLang = (language == 'es') ? literals.es : literals.en;
+  }
+  res.render('trainAndTreat', {title: "Train and Treat Leash | Anubis", lit: literalsLang});
+});
+
+router.get('/anubiscoin', (req, res) => {
+  if (!literalsLang) {
+    language = (req && req.acceptsLanguages('es')) ? 'es' : 'en';
+    literalsLang = (language == 'es') ? literals.es : literals.en;
+  }
+  res.render('anubiscoin', {title: "Anubiscoin", lit: literalsLang});
+});
+
+router.get('/nfts', (req, res) => {
+  if (!literalsLang) {
+    language = (req && req.acceptsLanguages('es')) ? 'es' : 'en';
+    literalsLang = (language == 'es') ? literals.es : literals.en;
+  }
+  res.render('nfts', {title: "NFTs | Anubis", lit: literalsLang});
+});
+
+router.get('/merch', (req, res) => {
+  if (!literalsLang) {
+    language = (req && req.acceptsLanguages('es')) ? 'es' : 'en';
+    literalsLang = (language == 'es') ? literals.es : literals.en;
+  }
+  res.render('merch', {title: "Merch | Anubis", lit: literalsLang});
 });
 
 router.get('/loginPage', (req, res) => {
