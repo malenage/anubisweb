@@ -15,7 +15,7 @@ block content
                     .slick-track(style='opacity: 1; width: 1275px; transform: translate3d(0px, 0px, 0px);' role='listbox')
                       .item.slick-slide.slick-current.slick-active(style='width: 425px;' tabindex='-1' role='option' aria-describedby='slick-slide00' data-slick-index='0' aria-hidden='false')
                         .slick-product-figure
-                          //- img(src='images/sample.png' alt='' width='530' height='530')
+                          img(src='images/Moneda.png' alt='' width='530' height='530')
                       //- .item.slick-slide(style='width: 425px;' tabindex='-1' role='option' aria-describedby='slick-slide01' data-slick-index='1' aria-hidden='true')
                       //-   .slick-product-figure
                       //-     img(src='images/_RAF4918Small.jpg' alt='' width='530' height='480')
@@ -47,108 +47,45 @@ block content
               .single-product
                 h3 #{lit.nftTitle}
                 p
-                  | #{lit.nftSub}
-                .divider.divider-30
-                //- ul.list.list-description.d-inline-block.d-md-block
-                //-   li
-                //-     span La correa 
-                //-     span está fabricada con cuerda de alta resistencia y material reflectante.
-                //-   li
-                //-     span Todos sus mosquetones 
-                //-     span son de la más alta calidad y durabilidad.
-                //-   li
-                //-     span El resorte 
-                //-     span al comienzo de la correa provee amortiguación.
-                //-   li
-                //-     span El collar deslizante  
-                //-     span tiene topes regulables a ambos lados para no lastimar el cuello de tu perro y que no pueda salirse de él.
-                //-   li
-                //-     span Un mango acolchado  
-                //-     span protegerá la nariz de tu perro al usar la función de bozal.
-                //-   li
-                //-     span El agarre  
-                //-     span de la correa posee un mango acolchado para su comodidad. 
-                .group-sm.group-middle
-                  //- .product-stepper
-                    //- .stepper
-                    //-   input.form-input.stepper-input(type='number' data-zeros='true' value='1' min='1' max='1000')
-                    //-   span.stepper-arrow.up
-                    //-   span.stepper-arrow.down
-                  //- div
-                  //-   a.button.button-primary.button-pipaluk(href='https://www.amazon.es/dp/B09KS2GRC1/ref=cm_sw_em_r_mt_dp_PMNS8N00DPJWN21AZA18' target='_blank') Comprar
-                //- .divider.divider-40
-                //- .group-md.group-middle
-                  span.social-title Share
-                  div
-                    ul.list-inline.list-inline-sm.social-list
-                      li
-                        a.icon.fa.fa-facebook(href='#')
-                      li
-                        a.icon.fa.fa-twitter(href='#')
-                      li
-                        a.icon.fa.fa-google-plus(href='#')
-                      li
-                        a.icon.fa.fa-instagram(href='#')
-          // Bootstrap tabs
-          //- #tabs-5.tabs-custom.tabs-horizontal.tabs-corporate
-            // Nav tabs
-            ul.nav.nav-tabs
-              li.nav-item(role='presentation')
-                a.nav-link.active(href='#tabs-5-1' data-toggle='tab') Testimonials (1)
-              li.nav-item(role='presentation')
-                a.nav-link(href='#tabs-5-2' data-toggle='tab') Additional information
-              li.nav-item(role='presentation')
-                a.nav-link(href='#tabs-5-3' data-toggle='tab') Delivery and payment
-            // Tab panes
-            .tab-content
-              #tabs-5-1.tab-pane.fade.show.active
-                .box-comment
-                  .unit.unit-spacing-md.flex-column.flex-md-row.align-items-lg-center
-                    .unit-left
-                      a.box-comment-figure(href='#')
-                        img(src='images/user-1-119x119.jpg' alt='' width='119' height='119')
-                    .unit-body
-                      .group-sm.group-justify
-                        div
-                          .group-sm.group-middle
-                            p.box-comment-author
-                              a(href='#') John Doe
-                            .box-rating
-                              span.icon.fa.fa-star
-                              span.icon.fa.fa-star
-                              span.icon.fa.fa-star
-                              span.icon.fa.fa-star
-                              span.icon.fa.fa-star-half-o
-                        .box-comment-time
-                          time(datetime='2018-11-30') Nov 30, 2018
-                      p.box-comment-text
-                        | The product you delivered me has surpassed all my expectations. The item is one of the best, all-purpose items ever crafted. I love everything about my purchase. Reliable, secure, quirky, easy to clean in and out.
-                h5.text-spacing-100.font-weight-normal Add Your Comment
-                form.rd-form.rd-mailform(novalidate='novalidate')
-                  .row.row-14.gutters-14
-                    .col-sm-6
-                      .form-wrap
-                        input#contact-your-name-4.form-input.form-control-has-validation(type='text' name='name' data-constraints='@Required')
-                        span.form-validation
-                        label.form-label.rd-input-label(for='contact-your-name-4') Your Name
-                    .col-sm-6
-                      .form-wrap
-                        input#contact-email-4.form-input.form-control-has-validation(type='email' name='email' data-constraints='@Email @Required')
-                        span.form-validation
-                        label.form-label.rd-input-label(for='contact-email-4') Your E-mail
-                    .col-12
-                      .form-wrap
-                        label.form-label.rd-input-label(for='contact-message-4') Message
-                        textarea#contact-message-4.form-input.textarea-lg.form-control-has-validation.form-control-last-child(name='message' data-constraints='@Required')
-                        span.form-validation
-                  button.button.button-primary.button-pipaluk(type='submit') Submit
-              #tabs-5-2.tab-pane.fade
-                p
-                  | Here you will find more useful information about the chosen product. It&rsquo;s always good to have the choice we can offer. We try to cater to the needs of each and every whimsical buyer. This product is qualitative and affordable at the same time. Take advantage of this product&rsquo;s benefits and you&apos;ll see that this is exactly the product you need. Besides you can save your money on account of the lowest prices.
-              #tabs-5-3.tab-pane.fade
-                p
-                  | Here you can read some details about a nifty little lifecycle of your order&apos;s journey from the time you place your order to your new treasures arriving at your doorstep. At first you choose the product you like. Then you put into your shopping cart and pass the checkout process in a few clicks. Our store offers several payment and delivery methods, so you have an opportunity to choose which one is the most convenient for you.
+                  | Anubis 3.0 project is releasing a set of NFT collections in anticipation of its own token.
 
+                  section.section.section-md.bg-default
+                    .container
+                      .row.row-40.justify-content-center
+                        .col-md-5.col-lg-6
+                          .row.row-30.justify-content-center
+                            .col-sm-6.col-md-12.col-lg-6
+                              .oh-desktop
+                                // Product
+                                article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
+                                  .unit.flex-row.flex-lg-column
+                                    .unit-left
+                                      .product-figure
+                                        img(src='images/Moneda_perspectiva.png' alt='' width='270' height='280')
+                                        .product-button
+                                          a.button.button-md.button-white.button-ujarak(href='https://opensea.io/Anubis3-0' target='_blank') #{lit.buy}
+                                    .unit-body
+                                      h6.product-title
+                                        a(href='#') Anubis Coin
+                                      a.button.button-sm.button-secondary.button-ujarak(href='https://opensea.io/Anubis3-0' target='_blank') #{lit.buy}
+                            //- .col-sm-6.col-md-12.col-lg-6
+                              .oh-desktop
+                                // Product
+                                article.product.product-2.box-ordered-item.wow.slideInLeft(data-wow-delay='0s')
+                                  .unit.flex-row.flex-lg-column
+                                    .unit-left
+                                      .product-figure
+                                        img(src='images/freakyAnubis.gif' alt='' width='270' height='280')
+                                        .product-button
+                                          a.button.button-md.button-white.button-ujarak(href='https://exchange.art/artists/Anubis/nfts' target='_blank') #{lit.buy}
+                                    .unit-body
+                                      h6.product-title
+                                        a(href='#') #{lit.merch.womenTShirt}
+                                      .product-price-wrap
+                                        //- .product-price €37,90+
+                                      a.button.button-sm.button-secondary.button-ujarak(href='https://exchange.art/artists/Anubis/nfts' target='_blank') #{lit.buy}
+                .divider.divider-30
+                .group-sm.group-middle
       // Page Footer
       include footer                    
     
