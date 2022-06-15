@@ -17,15 +17,15 @@ block content
                       p(data-caption-animate='fadeInRight' data-caption-delay='300') #{lit.nftSub}
                       .oh.button-wrap
                         a.button.button-primary.button-ujarak(href='/nfts' data-caption-animate='slideInLeft' data-caption-delay='400') #{lit.read}
-          .swiper-slide(data-slide-bg='images/slider-coin-1920×729.jpg')
+          .swiper-slide(data-slide-bg='images/slider-training-1920×729.jpg')
             .swiper-slide-caption
               .container
                 .row.justify-content-center.justify-content-xxl-start
                   .col-md-10.col-xxl-6
                     .slider-modern-box
                       h1.slider-modern-title
-                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.coinTitle}
-                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.coinSub}
+                        span(data-caption-animate='slideInDown' data-caption-delay='0') #{lit.trainingTitle}
+                      p(data-caption-animate='fadeInRight' data-caption-delay='400') #{lit.trainingSub}
                       .oh.button-wrap
                         a.button.button-primary.button-ujarak(href='/anubiscoin' data-caption-animate='slideInUp' data-caption-delay='400') #{lit.read}
           .swiper-slide.context-dark(data-slide-bg='images/slider-allLeash-1920×729.jpg')
@@ -75,7 +75,7 @@ block content
                       .unit.flex-row.flex-lg-column
                         .unit-left
                           .product-figure
-                            img(src='images/sample1.png' alt='' width='270' height='280')
+                            img(src='images/Moneda.png' alt='' width='270' height='280')
                             .product-button
                               a.button.button-md.button-white.button-ujarak(href='/nfts' target='_blank') #{lit.read}
                         .unit-body
@@ -86,19 +86,18 @@ block content
                 .col-sm-6.col-md-12.col-lg-6
                   .oh-desktop
                     // Product
-                    article.product.product-2.box-ordered-item.wow.slideInLeft(data-wow-delay='0s')
+                    article.product.product-2.box-ordered-item.wow.slideInRight(data-wow-delay='0s')
                       .unit.flex-row.flex-lg-column
                         .unit-left
                           .product-figure
-                            img(src='images/Moneda.png' alt='' width='270' height='280')
+                            img(src='images/training.jpeg' alt='' width='270' height='280')
                             .product-button
-                              a.button.button-md.button-white.button-ujarak(href='/anubiscoin' target='_blank') #{lit.read}
+                              a.button.button-md.button-white.button-ujarak(href='/training' target='_blank') #{lit.read}
                         .unit-body
                           h6.product-title
-                            a(href='#') #{lit.coinTitle}
+                            a(href='#') #{lit.trainingTitle}
                           .product-price-wrap
-                            //- .product-price €37,90+
-                          a.button.button-sm.button-secondary.button-ujarak(href='/anubiscoin' target='_blank') #{lit.read}
+                          a.button.button-sm.button-secondary.button-ujarak(href='/training' target='_blank') #{lit.read}
                 .col-sm-6.col-md-12.col-lg-6
                   .oh-desktop
                     // Product
@@ -259,7 +258,7 @@ block content
                     a(href='#') Echo
                   p.team-classic-status Modelo
       // About us
-      section.section
+      //- section.section
         .parallax-container(data-parallax-img='images/bg-parallax-2.jpg')
           .parallax-content.section-xl.context-dark.bg-overlay-68
             .container
@@ -277,7 +276,7 @@ block content
                       span.counter 2
                       span.symbol B
                       span.icon.counter-creative-icon.fl-bigmug-line-up104
-                    h6.counter-creative-title Anubiscoins
+                    h6.counter-creative-title #{lit.trainingTitle}
                 .col-sm-6.col-md-5.col-lg-3.wow.fadeInLeft(data-wow-delay='.2s')
                   .counter-creative
                     .counter-creative-number

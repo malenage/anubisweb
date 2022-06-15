@@ -32,12 +32,12 @@ router.get('/', (req, res) => {
 });
 
 /* Adiestramiento page */
-router.get('/adiestramiento', (req, res) => {
+router.get('/training', (req, res) => {
   if (!literalsLang) {
     language = (req && req.acceptsLanguages('es')) ? 'es' : 'en';
     literalsLang = (language == 'es') ? literals.es : literals.en;
   }
-  res.render('adiestramiento', {title: "Adiestramiento | Anubis", lit: literalsLang});
+  res.render('adiestramiento', {title: "Dog Behaviourist | Anubis", lit: literalsLang});
 });
 
 router.get('/products', (req, res) => {
